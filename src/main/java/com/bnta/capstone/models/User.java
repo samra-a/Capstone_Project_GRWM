@@ -1,5 +1,6 @@
 package com.bnta.capstone.models;
 
+import com.bnta.capstone.services.CollageService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -64,6 +65,8 @@ public class User {
     public void addCollageToUser(Collage collage){
         this.collages.add(collage);
     }
+
+    public void removeCollageFromUserList(Collage collage) {this.collages.remove(collage);}
 }
 
 
