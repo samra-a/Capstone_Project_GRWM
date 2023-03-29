@@ -60,6 +60,10 @@ public class User {
     public void setCollages(List<Collage> collages) {
         this.collages = collages;
     }
+
+    public void addCollageToUser(Collage collage){
+        this.collages.add(collage);
+    }
 }
 
 
