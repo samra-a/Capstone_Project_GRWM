@@ -32,7 +32,7 @@ public class UserController {
     }
 
     // add collage to user list
-    @PostMapping
+    @PostMapping(value = "/{userId}/collage/{collageId}")
 
     public ResponseEntity <Collage>addCollageToUserList(@RequestParam Long userId, @RequestBody Collage collage) {
         if (userService.findUserById(userId) == null){
@@ -42,7 +42,20 @@ public class UserController {
         return new ResponseEntity<>(collage, HttpStatus.CREATED);
     }
 
-// findCollageByCategory
+    // delete collage in user list
+    @DeleteMapping(value = "/{userId}/collage/{collageId}")
+    public ResponseEntity deleteCollage(@PathVariable Long userId, @PathVariable Long collageId){
+        userService.deleteCollageFromUserList(userId, collageId);
+        return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+    }
+
+    // delete user list
+
+    @DeleteMapping(value ="/{userId}")
+    public ResponseEntity deleteUserList(@PathVariable Long userId){
+        userService.deleteUsersCollageList(userId);
+        return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+    }
 
 
 

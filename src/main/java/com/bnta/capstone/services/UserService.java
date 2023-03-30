@@ -32,9 +32,10 @@ public class UserService {
     }
 
     // delete collage in user list
-    public void deleteCollageFromUserList (Long userId, Collage collage) {
+    public void deleteCollageFromUserList (Long userId, Long collageId) {
         User userCollageToDelete = userRepository.findById(userId).get();
-        userCollageToDelete.removeCollageFromUserList(collage);
+        Collage collageToDelete = collageRepository.findById(collageId).get();
+        userCollageToDelete.removeCollageFromUserList(collageToDelete);
 
         if (userCollageToDelete.getCollages().isEmpty()) {
             deleteUsersCollageList(userId);
