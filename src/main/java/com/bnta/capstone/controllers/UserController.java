@@ -23,8 +23,7 @@ public class UserController {
     CollageService collageService;
 
     // Find User by Id
-    @GetMapping (value ="/{userId}")
-
+    @GetMapping(value ="/{userId}")
     public ResponseEntity <User>getUserById(@PathVariable Long userId){
         User user = userService.findUserById(userId);
         if (user != null) {
@@ -36,14 +35,13 @@ public class UserController {
     }
 
     // add collage to user list
-    @PostMapping(value = "/{userId}/collage/{collageId}")
-
-    public ResponseEntity <Collage>addCollageToUserList(@RequestParam Long userId, @RequestBody Collage collage) {
+    @PostMapping(value = "/{userId}/collages/{collageId}")
+    public ResponseEntity <User>addCollageToUser(@PathVariable Long userId, @PathVariable Long collageId) {
         if (userService.findUserById(userId) == null){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-        userService.addCollageToUserList(userId, collage);
-        return new ResponseEntity<>(collage, HttpStatus.CREATED);
+        User updatedUser = userService.addCollageToUserList(userId, collageId);
+        return new ResponseEntity<>(updatedUser, HttpStatus.CREATED);
     }
 
     // delete collage in user list
@@ -54,35 +52,11 @@ public class UserController {
     }
 
     // delete user list
-
     @DeleteMapping(value ="/{userId}")
     public ResponseEntity deleteUserList(@PathVariable Long userId){
         userService.deleteUsersCollageList(userId);
         return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
     }
-
-//-------------------------------------------------------------------------collageController---------------------------------------------------------------------------
-// findAllCollages
-    @GetMapping(value ="/{collages}")
-    public ResponseEntity <List<Collage>>findAllCollages (){
-        List<Collage> collages = collageService.findAllCollages();
-        if (collages == null) {return new ResponseEntity<>( HttpStatus.NO_CONTENT);}
-        return new ResponseEntity<>(collages, HttpStatus.OK);
-    }
-
-    // findCollageByCategory
-    @GetMapping(value ="/{collages}")
-    public ResponseEntity <List<Collage>> findCollageCategory (@RequestParam(name="category") Category category){
-        return new ResponseEntity<>(collageService.filterCollagesByCategory(category), HttpStatus.OK);
-    }
-
-    // get all users lists
-    @GetMapping(value ="/{usersId}/{collages}")
-    public ResponseEntity <List<Collage>> findUserList (@PathVariable Long userId){
-        return new ResponseEntity<>(collageService.findListsByUserId(userId), HttpStatus.OK);
-    }
-
-
 
 
 }

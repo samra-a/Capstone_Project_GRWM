@@ -19,10 +19,11 @@ public class UserService {
     CollageRepository collageRepository;
 
     // add collage to user list
-    public void addCollageToUserList (Long userId, Collage collage){
+    public User addCollageToUserList (Long userId, Long collageId){
         User userListToUpdate = userRepository.findById(userId).get();
+        Collage collage = collageRepository.findById(collageId).get();
         userListToUpdate.addCollageToUser(collage);
-        userRepository.save(userListToUpdate);
+        return userRepository.save(userListToUpdate);
     }
 
 
@@ -47,7 +48,7 @@ public class UserService {
     public void deleteUsersCollageList(Long userId) {
         User user = userRepository.findById(userId).get();
 
-        for (int i = user.getCollages().size(); i >= 0; i--) {
+        for (int i = user.getCollages().size() -1; i >= 0; i--) {
             user.getCollages().remove(i);
         }
         userRepository.save(user);

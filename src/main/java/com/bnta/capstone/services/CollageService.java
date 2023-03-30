@@ -6,13 +6,18 @@ import com.bnta.capstone.models.User;
 import com.bnta.capstone.repositories.CollageRepository;
 import com.bnta.capstone.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CollageService {
 
     @Autowired
     CollageRepository collageRepository;
+
+    @Autowired
+    UserRepository userRepository;
 
     // findAllCollages
     public List<Collage> findAllCollages(){
@@ -26,7 +31,8 @@ public class CollageService {
 
     // get all users lists
     public List<Collage> findListsByUserId(Long userId){
-        return collageRepository.findByUserId(userId);
+        User user = userRepository.findById(userId).get();
+        return collageRepository.findByUsers(user);
     }
 
 
