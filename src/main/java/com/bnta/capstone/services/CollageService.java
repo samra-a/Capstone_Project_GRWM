@@ -2,6 +2,7 @@ package com.bnta.capstone.services;
 
 import com.bnta.capstone.enums.Category;
 import com.bnta.capstone.models.Collage;
+import com.bnta.capstone.models.CollageDTO;
 import com.bnta.capstone.models.User;
 import com.bnta.capstone.repositories.CollageRepository;
 import com.bnta.capstone.repositories.UserRepository;
@@ -30,9 +31,15 @@ public class CollageService {
     }
 
     // get all users lists
-    public List<Collage> findListsByUserId(Long userId){
+    public List<CollageDTO> findListsByUserId(Long userId){
         User user = userRepository.findById(userId).get();
-        return collageRepository.findByUsers(user);
+        List<Collage> collageUser = collageRepository.findByUsers(user);
+        List<CollageDTO>
+    }
+
+    // DTO method
+    public CollageDTO collageDTOBuilder(Collage collage){
+        return new CollageDTO(collage.getId(), collage.getName(), collage.getDescription(), collage.getCategory());
     }
 
 
