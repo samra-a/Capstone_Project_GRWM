@@ -2,6 +2,7 @@ package com.bnta.capstone.controllers;
 
 import com.bnta.capstone.enums.Category;
 import com.bnta.capstone.models.Collage;
+import com.bnta.capstone.models.CollageDTO;
 import com.bnta.capstone.services.CollageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,9 +34,9 @@ public class CollageController {
 
     // get all users lists
     @GetMapping(value ="/users/{userId}")
-    public ResponseEntity <List<Collage>> findUserList (@PathVariable Long userId){
-        List<Collage> userCollage = collageService.findListsByUserId(userId);
-        if (userCollage != null) {return new ResponseEntity<>(collageService.findListsByUserId(userId), HttpStatus.OK);}
+    public ResponseEntity <List<CollageDTO>> findUserList (@PathVariable Long userId){
+        List<CollageDTO> userCollage = collageService.findListsByUserId(userId);
+        if (userCollage != null) {return new ResponseEntity<>(userCollage, HttpStatus.OK);}
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
