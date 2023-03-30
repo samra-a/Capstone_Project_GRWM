@@ -1,5 +1,6 @@
 package com.bnta.capstone.controllers;
 
+import com.bnta.capstone.enums.Category;
 import com.bnta.capstone.models.Collage;
 import com.bnta.capstone.models.User;
 import com.bnta.capstone.services.CollageService;
@@ -8,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/users")
@@ -57,6 +61,26 @@ public class UserController {
         return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
     }
 
+//-------------------------------------------------------------------------collageController---------------------------------------------------------------------------
+// findAllCollages
+    @GetMapping(value ="/{collages}")
+    public ResponseEntity <List<Collage>>findAllCollages (){
+        List<Collage> collages = collageService.findAllCollages();
+        if (collages == null) {return new ResponseEntity<>( HttpStatus.NO_CONTENT);}
+        return new ResponseEntity<>(collages, HttpStatus.OK);
+    }
+
+    // findCollageByCategory
+    @GetMapping(value ="/{collages}")
+    public ResponseEntity <List<Collage>> findCollageCategory (@RequestParam(name="category") Category category){
+        return new ResponseEntity<>(collageService.filterCollagesByCategory(category), HttpStatus.OK);
+    }
+
+    // get all users lists
+    @GetMapping(value ="/{usersId}/{collages}")
+    public ResponseEntity <List<Collage>> findUserList (@PathVariable Long userId){
+        return new ResponseEntity<>(collageService.findListsByUserId(userId), HttpStatus.OK);
+    }
 
 
 
