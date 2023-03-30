@@ -9,6 +9,7 @@ import com.bnta.capstone.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,10 +35,11 @@ public class CollageService {
     public List<CollageDTO> findListsByUserId(Long userId){
         User user = userRepository.findById(userId).get();
         List<Collage> collageUser = collageRepository.findByUsers(user);
-        List<CollageDTO> collageDTOs = newArrayList<>();
+        List<CollageDTO> collageDTOs = new ArrayList<>();
         for(Collage collage : collageUser){
-            collageDTOs.add(collageDTOBuilder(collage))
+            collageDTOs.add(collageDTOBuilder(collage));
         }
+        return collageDTOs;
     }
 
     // DTO method
