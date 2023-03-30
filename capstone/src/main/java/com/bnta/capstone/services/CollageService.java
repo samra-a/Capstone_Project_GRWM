@@ -43,7 +43,7 @@ public class CollageService {
     }
 
     // DTO method
-    public CollageDTO collageDTOBuilder(Collage collagesss){
+    public CollageDTO collageDTOBuilder(Collage collage){
         return new CollageDTO(collage.getId(), collage.getName(), collage.getDescription(), collage.getCategory());
     }
 
