@@ -41,7 +41,7 @@ public class DataLoader implements ApplicationRunner {
                 "lipstick.", Category.NIGHT_OUT);
 
         Collage collageNO4 = new Collage("Rooftop Romance", "Flowing maxi dresses, " +
-                "delicate lace tops, high-waisted trousers, strappy sandals, and delicate jewelry like " +
+                "delicate lace tops, high-waisted trousers, strap sandals, and delicate jewelry like " +
                 "stud earrings or delicate necklaces.", Category.NIGHT_OUT);
 
         Collage collageNO5 = new Collage("Vintage Vibes", "Retro-inspired pieces like polka " +
@@ -60,22 +60,22 @@ public class DataLoader implements ApplicationRunner {
                         "delicate jewelry like pearl earrings or simple bracelets", Category.NIGHT_OUT);
 
         Collage collageNO9 = new Collage("Sophisticated Sparkle",
-                "Chic and refined pieces like midi dresses, strappy heels, metallic clutch bags, " +
+                "Chic and refined pieces like midi dresses, strap heels, metallic clutch bags, " +
                         "and statement jewelry like crystal drop earrings or layered necklaces.", Category.NIGHT_OUT);
 
         Collage collageNO10 = new Collage("After Dark",
-                "Sultry and alluring pieces like bodycon dresses, strappy sandals, bold " +
+                "Sultry and alluring pieces like bodycon dresses, strap sandals, bold " +
                         "accessories like statement necklaces or cuff bracelets.", Category.NIGHT_OUT);
 
 
 
 //        WEDDING collages
         Collage collageW1 = new Collage("Romantic Lace",
-                "Soft and delicate pieces like lace dresses, strappy heels, pearl earrings, " +
+                "Soft and delicate pieces like lace dresses, strap heels, pearl earrings, " +
                         "and simple clutch bags.", Category.WEDDING);
 
         Collage collageW2 = new Collage("Garden Wedding",
-                "Light and airy pieces like floral dresses, strappy sandals, dainty " +
+                "Light and airy pieces like floral dresses, strap sandals, dainty " +
                         "accessories like floral hair pins or drop earrings.", Category.WEDDING);
 
         Collage collageW3 = new Collage("Black Tie Glam",
@@ -84,7 +84,7 @@ public class DataLoader implements ApplicationRunner {
                         "or layered necklaces.", Category.WEDDING);
 
         Collage collageW4 = new Collage("Beach Chic",
-                "Flowy and breezy pieces like maxi dresses, strappy sandals, sun hats, " +
+                "Flowy and breezy pieces like maxi dresses, strap sandals, sun hats, " +
                         "and shell jewelry like bracelets or necklaces.", Category.WEDDING);
 
         Collage collageW5 = new Collage("Rustic Charm",
@@ -108,7 +108,7 @@ public class DataLoader implements ApplicationRunner {
                         "and delicate jewelry like fairy-inspired necklaces or bracelets.", Category.WEDDING);
 
         Collage collageW10 = new Collage("Golden Glam",
-                "Luxurious pieces like metallic dresses, strappy heels, gold clutch bags, " +
+                "Luxurious pieces like metallic dresses, strap heels, gold clutch bags, " +
                         "and statement jewelry like crystal drop earrings or layered necklaces.", Category.WEDDING);
 
 
@@ -174,7 +174,7 @@ public class DataLoader implements ApplicationRunner {
 
         Collage collageF3 = new Collage("Red Carpet Ready",
                 "Dramatic and eye-catching pieces like sequin gowns, high slit " +
-                        "dresses, strappy heels, and statement jewelry like " +
+                        "dresses, strap heels, and statement jewelry like " +
                         "sparkling chokers or stacked bangles.", Category.FORMAL);
 
         Collage collageF4 = new Collage("Chic and Sleek",
@@ -183,7 +183,7 @@ public class DataLoader implements ApplicationRunner {
                         "earrings or simple necklaces.", Category.FORMAL);
 
         Collage collageF5 = new Collage("Garden Party",
-                "Light and airy pieces like flowy maxi dresses, strappy sandals, " +
+                "Light and airy pieces like flowy maxi dresses, strap sandals, " +
                         "clutch bags, and delicate jewelry like drop earrings or " +
                         "thin bracelets.", Category.FORMAL);
 
