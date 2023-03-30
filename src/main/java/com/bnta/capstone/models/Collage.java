@@ -23,12 +23,7 @@ public class Collage {
     private String description;
 
     @JsonIgnoreProperties({"collage"})
-    @ManyToMany
-    @JoinTable(
-            name = "users_collages",
-            joinColumns = @JoinColumn(name = "collage_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id")
-    )
+    @ManyToMany(mappedBy = "collages")
     private List<User> users;
 
     @Enumerated(EnumType.ORDINAL)

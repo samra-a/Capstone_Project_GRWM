@@ -20,7 +20,12 @@ public class User {
     @Column
     private String email;
     @JsonIgnoreProperties({"users"})
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany
+    @JoinTable(
+            name = "users_collages",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "collage_id")
+    )
     private List<Collage> collages;
 
     public User(String name, String email){
