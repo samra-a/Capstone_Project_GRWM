@@ -34,9 +34,9 @@ public class CollageController {
 
     // get all users lists
     @GetMapping(value ="/users/{userId}")
-    public ResponseEntity <List<Collage>> findUserList (@PathVariable Long userId){
+    public ResponseEntity <List<CollageDTO>> findUserList (@PathVariable Long userId){
         List<CollageDTO> userCollage = collageService.findListsByUserId(userId);
-        if (userCollage != null) {return new ResponseEntity<>(collageService.findListsByUserId(userId), HttpStatus.OK);}
+        if (userCollage != null) {return new ResponseEntity<>(userCollage, HttpStatus.OK);}
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 

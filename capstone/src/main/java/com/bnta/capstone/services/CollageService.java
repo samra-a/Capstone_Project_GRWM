@@ -34,7 +34,10 @@ public class CollageService {
     public List<CollageDTO> findListsByUserId(Long userId){
         User user = userRepository.findById(userId).get();
         List<Collage> collageUser = collageRepository.findByUsers(user);
-        List<CollageDTO>
+        List<CollageDTO> collageDTOs = newArrayList<>();
+        for(Collage collage : collageUser){
+            collageDTOs.add(collageDTOBuilder(collage))
+        }
     }
 
     // DTO method
