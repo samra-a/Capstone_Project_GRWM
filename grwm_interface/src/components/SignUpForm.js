@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-const SignUpForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const SignUpForm = (saveUser) => {
+  const [user, setUser] = useState({
+    name: "",
+    email:""
+})
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+  const handleUserChange = (event) => {
+    setUser(event.target.value);
   };
 
   const handlePasswordChange = (event) => {
@@ -21,7 +23,7 @@ const SignUpForm = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Email:{" "}
-          <input type="email" value={email} onChange={handleEmailChange} />
+          <input type="text" value={text} onChange={handleUserChange} />
         </label>
         <label>
           Password:{" "}
