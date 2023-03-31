@@ -1,16 +1,16 @@
 import '../App.css';
-import Home from '../pages/home'
+import Home from '../pages/Home'
 import {
   RouterProvider,
   createBrowserRouter,
   createHashRouter
 } from "react-router-dom";
-import Register from '../pages/register'
-import SignIn from '../pages/signIn'
-import Quiz from '../pages/quiz'
+import Register from '../pages/Register'
+import SignIn from '../pages/SignIn'
+import Quiz from '../pages/Quiz'
 import { useState } from 'react';
 
-const grwmContainer = () => {
+const GrwmContainer = () => {
 
   const [error, setError] = useState("");
 
@@ -56,4 +56,4 @@ const grwmContainer = () => {
   );
 }
 
-export default grwmContainer;
+export default GrwmContainer;

@@ -1,9 +1,9 @@
 import './App.css';
-import grwmContainer from './containers/grwmContainer';
+import GrwmContainer from './containers/GrwmContainer';
 
 function App() {
   return (
-    <grwmContainer />
+    <GrwmContainer />
   );
 }
 
