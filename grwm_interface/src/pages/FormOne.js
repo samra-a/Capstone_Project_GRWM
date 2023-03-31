@@ -12,6 +12,7 @@ const FormOne = ({}) => {
       <div className="occasions">
         <h2> 1. What Type of Occasion Are You Shopping For?</h2> 
         <form onSubmit={handleSubmit}></form>
+        
 
       </div>
     );
