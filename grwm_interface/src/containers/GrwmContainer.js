@@ -9,25 +9,41 @@ import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
 import FormOne from '../pages/FormOne';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const GrwmContainer = () => {
 
   const [error, setError] = useState("");
+  const [users, setUsers] = useState([]);
+  const [collages, setCollages] = useState([]);
+
+  useEffect(() => {
+    loadUsers();
+    loadCollages();
+  }, [])
 
   const loadUsers = async () => {
-    const response = await fetch("https://localhost:8080/users")
-    const data = await response.json()
-    .catch((err) => setError(err.message));
-    return data;
+    const response = await fetch("http://localhost:8080/users")
+    if (response.ok){
+      const data = await response.json() 
+      setUsers(data);
+    } else {
+      console.log(response)
+    setError("404 - USERS NOT FOUND!")
+    };
   }
 
   const loadCollages = async () => {
-    const response = await fetch("https://localhost:8080/collages")
-    const data = await response.json()
-    .catch((err) => setError(err.message));
-    return data;
+    const response = await fetch("http://localhost:8080/collages")
+    if (response.ok){
+      const data = await response.json() 
+      setCollages(data);
+    } else {
+      console.log(response)
+    setError("404 - COLLAGES NOT FOUND!")
+    };
   }
+  
 
   const router = createHashRouter([
     {
@@ -54,10 +70,13 @@ const GrwmContainer = () => {
     },
   ])
 
-  if (error !== "") return <p>Error! {error}</p>;
-
   return (
+    <>
     <RouterProvider router={router}/>
+    {error !== "" && <p>{error}</p>}
+    </>
+
+    
   );
 }
 
