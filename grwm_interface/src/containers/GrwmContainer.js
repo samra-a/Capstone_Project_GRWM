@@ -9,6 +9,7 @@ import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
 import FormOne from '../pages/FormOne';
+import FinalCollage from '../pages/FinalCollage';
 import { useEffect, useState } from 'react';
 
 const GrwmContainer = () => {
@@ -16,11 +17,18 @@ const GrwmContainer = () => {
   const [error, setError] = useState("");
   const [users, setUsers] = useState([]);
   const [collages, setCollages] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [occasion, setOccasion] = useState(""); //rename to category
+  const [suggestedCollages, setSuggestedCollages] = useState([]);
 
   useEffect(() => {
     loadUsers();
     loadCollages();
   }, [])
+
+  useEffect(() => {
+    loadCategories(collages)
+  }, [collages])
 
   const loadUsers = async () => {
     const response = await fetch("http://localhost:8080/users")
@@ -43,6 +51,22 @@ const GrwmContainer = () => {
     setError("404 - COLLAGES NOT FOUND!")
     };
   }
+
+  const loadCategories = async (collages) => {
+    let foundCategories = new Set();
+    collages.forEach((collage) => {
+      foundCategories.add(collage.category)
+    })
+    setCategories([...foundCategories]);
+
+  }
+
+  const submitPreferences = async ()=> {
+    const response = await fetch("http://localhost:8080/collages/category?category=" + occasion)
+    const data = await response.json() 
+    setSuggestedCollages(data);
+    // fetch collages/categories and pass in the category based on the occasion state at the top
+  }
   
 
   const router = createHashRouter([
@@ -64,7 +88,11 @@ const GrwmContainer = () => {
         },
         {
           path: "/formOne",
-          element: <FormOne />,
+          element: <FormOne categories={categories} occasion={occasion} setOccasion={setOccasion} submitPreferences={submitPreferences} />,
+        },
+        {
+          path: "/finalCollage",
+          element: <FinalCollage />,
         }
       ]
     },
@@ -73,6 +101,7 @@ const GrwmContainer = () => {
   return (
     <>
     <RouterProvider router={router}/>
+    
     {error !== "" && <p>{error}</p>}
     </>
 
