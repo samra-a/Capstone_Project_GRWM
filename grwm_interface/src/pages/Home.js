@@ -17,6 +17,9 @@ const Home = () => {
                         <li>
                             <Link to={"/quiz"}>Quiz</Link>
                         </li>
+                        <li>
+                            <Link to={"/formOne"}>Form One</Link>
+                        </li>
 
                     </ul>
                 </nav>

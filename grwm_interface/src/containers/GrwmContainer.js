@@ -8,6 +8,7 @@ import {
 import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
+import FormOne from '../pages/FormOne';
 import { useState } from 'react';
 
 const GrwmContainer = () => {
@@ -44,6 +45,10 @@ const GrwmContainer = () => {
         {
           path: "/quiz",
           element: <Quiz />,
+        },
+        {
+          path: "/formOne",
+          element: <FormOne />,
         }
       ]
     },
