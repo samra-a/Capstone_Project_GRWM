@@ -1,15 +1,18 @@
-import './App.css';
-import Home from './components/home'
+import '../App.css';
+import Home from '../pages/home'
 import {
   RouterProvider,
   createBrowserRouter,
   createHashRouter
 } from "react-router-dom";
-import Register from './components/signUpForm'
-import SignIn from './components/signInForm'
-import Quiz from './components/quizForm'
+import Register from '../pages/register'
+import SignIn from '../pages/signIn'
+import Quiz from '../pages/quiz'
+import { useState } from 'react';
 
-function App() {
+const grwmContainer = () => {
+
+  const [error, setError] = useState("");
 
   const loadUsers = async () => {
     const response = await fetch("https://localhost:8080/users")
@@ -33,17 +36,14 @@ function App() {
         {
           path: "/register",
           element: <Register />,
-          loader: loadCountries
         },
         {
           path: "/signIn",
           element: <SignIn />,
-          loader: loadCountries
         },
         {
           path: "/quiz",
           element: <Quiz />,
-          loader: loadCountries
         }
       ]
     },
