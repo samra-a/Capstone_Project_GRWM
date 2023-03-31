@@ -22,7 +22,15 @@ public class UserController {
     @Autowired
     CollageService collageService;
 
-    // Find User by Id
+    // Find all users
+    @GetMapping
+    public ResponseEntity<List<User>> findUsers (){
+        List<User> users = userService.findAllUsers();
+        if (users == null) {return new ResponseEntity<>( HttpStatus.NO_CONTENT);}
+        return new ResponseEntity<>(users, HttpStatus.OK);
+    }
+
+    // Find User by ID
     @GetMapping(value ="/{userId}")
     public ResponseEntity <User>getUserById(@PathVariable Long userId){
         User user = userService.findUserById(userId);
