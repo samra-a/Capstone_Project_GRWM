@@ -3,7 +3,7 @@ import Home from '../pages/Home'
 import {
   RouterProvider,
   createBrowserRouter,
-  createHashRouter
+  createHashRouter,
 } from "react-router-dom";
 import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
@@ -11,6 +11,7 @@ import Quiz from '../pages/Quiz'
 import FormOne from '../pages/FormOne';
 import FinalCollage from '../pages/FinalCollage';
 import { useEffect, useState } from 'react';
+
 
 const GrwmContainer = () => {
 

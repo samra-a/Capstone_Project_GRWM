@@ -17,6 +17,11 @@ const FormOne = ({ categories, occasion, setOccasion, submitPreferences }) => {
 
   // What type of occasion are you shopping for?
 
+  const handleClick = async () => {
+    await submitPreferences();
+    navigate("/finalCollage");
+  }
+
   return (
     <div className="occasions">
       <h2> 1. What Type of Occasion Are You Shopping For?</h2>
@@ -24,7 +29,7 @@ const FormOne = ({ categories, occasion, setOccasion, submitPreferences }) => {
         <option>Choose an option</option>
         {options}
       </select>
-      <button handleSubmit={navigate("/finalCollage")} onClick={submitPreferences}>Next Question</button>  
+      <button onClick={handleClick}>Next Question</button>  
       {/* final form will use the above line with submit preferences and can naviagate to another page */}
       {/* <button onClick={() => { navigate("/formTwo")}}>Next Question</button> */}
     </div>
