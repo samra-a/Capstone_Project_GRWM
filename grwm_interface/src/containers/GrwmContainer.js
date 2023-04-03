@@ -18,6 +18,7 @@ const GrwmContainer = () => {
   const [collage, setCollage] = useState([]);
   const [collageList, setCollageList] = useState([]);
   const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState([]);
   const [collages, setCollages] = useState([]);
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState("");
@@ -70,11 +71,24 @@ const GrwmContainer = () => {
     setSuggestedCollages(data);
   }
 
-  const groupByUserInput = ({ submitPreferences }) => {
-    return collages.filter((collage) => {
-      return collage.Category === submitPreferences
-    })
+  const postCollageToUser = (collageId) => {
+    if (currentUser !== null) {
+      fetch(`http://localhost:8080/users/${currentUser.id}/collages/${collage.id}`, {
+          method: "POST",
+          headers:
+              { "Content-Type": "application/json" },
+          body: JSON.stringify({
+              user: { id: currentUser.id },
+              collage: { id: collageId }
+          })
+      })
+          .then((response) => response.json())
+          .then((response) => {
+              setCollageList([...collageList, response]);
+          });
   }
+};
+
 
   const router = createHashRouter([
     {
@@ -99,7 +113,8 @@ const GrwmContainer = () => {
         },
         {
           path: "/finalCollage",
-          element: <FinalCollage collages={suggestedCollages} submitPreferences={submitPreferences}
+          element: <FinalCollage collages={suggestedCollages} submitPreferences={submitPreferences} setCollageList={setCollageList}
+          postCollageToUser={postCollageToUser}
           />,
         }
       ]

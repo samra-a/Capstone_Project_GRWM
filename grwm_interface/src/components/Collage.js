@@ -1,13 +1,11 @@
-const Collage = ({ collage, deleteCollage, addToCollageList }) => {
+const Collage = ({ collage, deleteCollage, handleAddToCollageList }) => {
     function importAll(files) {
         let images = {};
         files.keys().map((item, index) => { images[item.replace('./', '')] = files(item); });
         return images;
     }
-    const handleAddToCollageList = () => {
-        addToCollageList(collage);
-    };
-
+    
+ 
     const pics = importAll(require.context('../pictures', false, /\.(png|jpeg|svg)$/));
     return (
         <div className="collage-card">
