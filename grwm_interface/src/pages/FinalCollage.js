@@ -2,7 +2,7 @@ import { useState } from "react";
 import Collage from "../components/Collage";
 
 
-  const FinalCollage = ({ collages, submitPreferences, collage, postCollageToUser }) => {
+  const FinalCollage = ({ collages, submitPreferences, collage, postCollageToUser, collageList }) => {
 
     const [chosenIndex, setChosenIndex] = useState(0);
     const nextIndex = ()=> {
@@ -15,6 +15,7 @@ import Collage from "../components/Collage";
       console.log("This collage has successfully been added to your list!")
       postCollageToUser(collage);
       nextIndex();
+      // collageList.set()
   };
 
     console.log(collages);

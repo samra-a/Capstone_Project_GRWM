@@ -9,6 +9,7 @@ import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
 import FormOne from '../pages/FormOne';
 import FinalCollage from '../pages/FinalCollage';
+import UserAccount from '../pages/UserAccount';
 import { useEffect, useState } from 'react';
 
 
@@ -116,6 +117,11 @@ const GrwmContainer = () => {
           element: <FinalCollage collages={suggestedCollages} submitPreferences={submitPreferences} setCollageList={setCollageList}
           postCollageToUser={postCollageToUser}
           />,
+        },
+        {
+          path: "/userAccount",
+          element: <UserAccount users={users} currentUser={currentUser} setCurrentUser={setCurrentUser} collageList={collageList} 
+          setCollageList={setCollageList} collages={collages}/>
         }
       ]
     },

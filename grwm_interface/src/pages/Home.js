@@ -20,6 +20,9 @@ const Home = () => {
                         <li>
                             <Link to={"/formOne"}>Form One</Link>
                         </li>
+                        <li>
+                            <Link to={"/userAccount"}>Account</Link>
+                        </li>
                     </ul>
                 </nav>
             </header>
