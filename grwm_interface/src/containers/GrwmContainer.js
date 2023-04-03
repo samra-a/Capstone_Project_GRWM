@@ -8,7 +8,6 @@ import {
 import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
-import { useState } from 'react';
 import Category from '../components/Category';
 import CollageList from '../components/CollageList';
 import Collage from '../components/Collage';
@@ -27,7 +26,7 @@ const GrwmContainer = () => {
   const [users, setUsers] = useState([]);
   const [collages, setCollages] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [occasion, setOccasion] = useState(""); //rename to category
+  const [category, setCategory] = useState(""); //rename to category
   const [suggestedCollages, setSuggestedCollages] = useState([]);
 
   useEffect(() => {
@@ -76,7 +75,7 @@ const GrwmContainer = () => {
   }
 
   const submitPreferences = async ()=> {
-    const response = await fetch("http://localhost:8080/collages/category?category=" + occasion)
+    const response = await fetch("http://localhost:8080/collages/category?category=" + category)
     const data = await response.json() 
     setSuggestedCollages(data);
     // fetch collages/categories and pass in the category based on the occasion state at the top
@@ -102,7 +101,7 @@ const GrwmContainer = () => {
         },
         {
           path: "/formOne",
-          element: <FormOne categories={categories} occasion={occasion} setOccasion={setOccasion} submitPreferences={submitPreferences} />,
+          element: <FormOne categories={categories} category={category} setCategory={setCategory} submitPreferences={submitPreferences} />,
         },
         {
           path: "/finalCollage",
