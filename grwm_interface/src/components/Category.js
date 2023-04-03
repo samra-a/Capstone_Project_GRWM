@@ -1,12 +1,12 @@
-import CollageList from "./CollageList";
+// import CollageList from "./CollageList";
 
-const Category = ({collages, category}) =>  {
-    return (
-        <div className={`category ${category}`}>
-            <h2>{category}</h2>
-            <CollageList collages={collages}/>
-        </div>
-     );
-}
+// const Category = ({collages, submitPreferences}) =>  {
+//     return (
+//         <div className={`category ${submitPreferences}`}>
+//             <h2>{submitPreferences}</h2>
+//             <CollageList collages={collages}/>
+//         </div>
+//      );
+// }
  
-export default Category ;
+// export default Category ;

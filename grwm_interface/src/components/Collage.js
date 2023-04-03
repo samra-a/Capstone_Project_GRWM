@@ -13,7 +13,7 @@ const Collage = ({ collage, deleteCollage, addToCollageList }) => {
         <div className="collage-card">
             <img id="image" src={pics[`${collage.name}.jpeg`]} alt={collage.name} />
             <h4><strong>Collage: </strong>{collage.name}</h4>
-            <p><strong>Description: £</strong>{collage.description}</p>
+            <p><strong>Description: </strong>{collage.description}</p>
             <p><strong>Category: </strong>{collage.category}</p>
             <button className="like" onClick={handleAddToCollageList}>LOVE IT!</button>
             <button className="dislike" onClick={() => deleteCollage(collage.collageId)}>NEXT..</button>

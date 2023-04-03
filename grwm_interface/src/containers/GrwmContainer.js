@@ -8,7 +8,6 @@ import {
 import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
-import { useState } from 'react';
 import Category from '../components/Category';
 import CollageList from '../components/CollageList';
 import Collage from '../components/Collage';
@@ -20,7 +19,7 @@ import { useEffect, useState } from 'react';
 const GrwmContainer = () => {
 
   const [error, setError] = useState("");
-  const [collage, setCollage] = useState(null);
+  const [collage, setCollage] = useState([]);
   const [collageList, setCollageList] = useState([]);
   const [listToUpdate, setListToUpdate] = useState([]);
   const [listCategory, setListCategory] = useState([]);
@@ -62,9 +61,9 @@ const GrwmContainer = () => {
   }
 
 
-  // const handleAddItemButtonClick = (collageListToUpdate) => {
-  //   setCollageList(collageListToUpdate)
-  // }
+  const handleAddItemButtonClick = (collageListToUpdate) => {
+    setCollageList(collageListToUpdate)
+  }
 
   const loadCategories = async (collages) => {
     let foundCategories = new Set();
@@ -82,6 +81,11 @@ const GrwmContainer = () => {
     // fetch collages/categories and pass in the category based on the occasion state at the top
   }
   
+  const groupByUserInput = ({submitPreferences}) => {
+    return collages.filter((collage) => {
+      return collage.Category === submitPreferences
+    })
+  }
 
   const router = createHashRouter([
     {
@@ -106,7 +110,8 @@ const GrwmContainer = () => {
         },
         {
           path: "/finalCollage",
-          element: <FinalCollage />,
+          element: <FinalCollage collages={collages} submitPreferences={submitPreferences}
+          />,
         }
       ]
     },
@@ -118,11 +123,10 @@ const GrwmContainer = () => {
     // <div className="container_body">
     //     <div className="container_top">
     //       <div className="category_container">
-    //         <Category category={"Wedding"} collageList={filtercollagesByCategory("WEDDING")} handleAddItemButtonClick={handleAddItemButtonClick}/>
-    //         <Category category={"Casual"} collageList={filtercollagesByCategory("CASUAL")} handleAddItemButtonClick={handleAddItemButtonClick} />
-    //         <Category category={"Night-Out"} collageList={filtercollagesByCategory("NIGHT_OUT")} handleAddItemButtonClick={handleAddItemButtonClick} />
-    //         <Category category={"Formal"} collageList={filtercollagesByCategory("FORMAL")} handleAddItemButtonClick={handleAddItemButtonClick} />
-    //         <Category category={"StreetWear"} collageList={filtercollagesByCategory("STREETWEAR")} handleAddItemButtonClick={handleAddItemButtonClick} />
+    //         <Category category={"Wedding"} groupByUserInput={submitPreferences} handleAddItemButtonClick={handleAddItemButtonClick}/>
+    //         <Category category={"Casual"} collageList={submitPreferences("CASUAL")} handleAddItemButtonClick={handleAddItemButtonClick} />
+    //         <Category category={"Night-Out"} collageList={submitPreferences("NIGHT_OUT")} handleAddItemButtonClick={handleAddItemButtonClick} />
+    //         <Category category={"Formal"} collageList={submitPreferences("FORMAL")} handleAddItemButtonClick={handleAddItemButtonClick} />
     //       </div>
     //     </div>
     //     </div>
