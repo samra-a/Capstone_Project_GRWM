@@ -110,7 +110,7 @@ const GrwmContainer = () => {
         },
         {
           path: "/finalCollage",
-          element: <FinalCollage collages={collages} submitPreferences={submitPreferences}
+          element: <FinalCollage collages={suggestedCollages} submitPreferences={submitPreferences}
           />,
         }
       ]
