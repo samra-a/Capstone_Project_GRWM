@@ -1,5 +1,6 @@
 import '../App.css';
 import Home from '../pages/Home'
+import About from '../pages/About'
 import {
   RouterProvider,
   createBrowserRouter,
@@ -8,13 +9,13 @@ import {
 import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
-import { useState } from 'react';
 import Category from '../components/Category';
 import CollageList from '../components/CollageList';
 import Collage from '../components/Collage';
 import FormOne from '../pages/FormOne';
 import FinalCollage from '../pages/FinalCollage';
 import { useEffect, useState } from 'react';
+import SignUp from '../pages/SignUp';
 
 
 const GrwmContainer = () => {
@@ -83,7 +84,7 @@ const GrwmContainer = () => {
   }
   
 
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
       element: <Home />,
@@ -107,6 +108,18 @@ const GrwmContainer = () => {
         {
           path: "/finalCollage",
           element: <FinalCollage />,
+        },
+        {
+          path: "/about",
+          element: <About />
+        },
+        {
+          path: "/signIn",
+          element: <SignIn />
+        },
+        {
+          path: "/signUp",
+          element: <SignUp />
         }
       ]
     },
