@@ -2,11 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 
-const FormOne = ({ categories, occasion, setOccasion, submitPreferences }) => {
+const FormOne = ({ categories, category, setCategory, submitPreferences }) => {
   const navigate = useNavigate()
 
-  const handleOccasionOptions = (e) => {
-    setOccasion(e.target.value);
+  const handleCategoryOptions = (e) => {
+    setCategory(e.target.value);
   }
 
   const options = categories.map((category, index) => {
@@ -23,9 +23,9 @@ const FormOne = ({ categories, occasion, setOccasion, submitPreferences }) => {
   }
 
   return (
-    <div className="occasions">
+    <div className="Occasion">
       <h2> 1. What Type of Occasion Are You Shopping For?</h2>
-      <select name="OccasionOptions" value={occasion} onChange={handleOccasionOptions}>
+      <select name="categoryOptions" value={category} onChange={handleCategoryOptions}>
         <option>Choose an option</option>
         {options}
       </select>

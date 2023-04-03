@@ -2,15 +2,11 @@ import '../App.css';
 import Home from '../pages/Home'
 import {
   RouterProvider,
-  createBrowserRouter,
   createHashRouter,
 } from "react-router-dom";
 import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
-import Category from '../components/FilteredList';
-import CollageList from '../components/CollageList';
-import Collage from '../components/Collage';
 import FormOne from '../pages/FormOne';
 import FinalCollage from '../pages/FinalCollage';
 import { useEffect, useState } from 'react';
@@ -21,12 +17,10 @@ const GrwmContainer = () => {
   const [error, setError] = useState("");
   const [collage, setCollage] = useState([]);
   const [collageList, setCollageList] = useState([]);
-  const [listToUpdate, setListToUpdate] = useState([]);
-  const [listCategory, setListCategory] = useState([]);
   const [users, setUsers] = useState([]);
   const [collages, setCollages] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [occasion, setOccasion] = useState(""); //rename to category
+  const [category, setCategory] = useState("");
   const [suggestedCollages, setSuggestedCollages] = useState([]);
 
   useEffect(() => {
@@ -40,30 +34,26 @@ const GrwmContainer = () => {
 
   const loadUsers = async () => {
     const response = await fetch("http://localhost:8080/users")
-    if (response.ok){
-      const data = await response.json() 
+    if (response.ok) {
+      const data = await response.json()
       setUsers(data);
     } else {
       console.log(response)
-    setError("404 - USERS NOT FOUND!")
+      setError("404 - USERS NOT FOUND!")
     };
   }
 
   const loadCollages = async () => {
     const response = await fetch("http://localhost:8080/collages")
-    if (response.ok){
-      const data = await response.json() 
+    if (response.ok) {
+      const data = await response.json()
       setCollages(data);
     } else {
       console.log(response)
-    setError("404 - COLLAGES NOT FOUND!")
+      setError("404 - COLLAGES NOT FOUND!")
     };
   }
 
-
-  const handleAddItemButtonClick = (collageListToUpdate) => {
-    setCollageList(collageListToUpdate)
-  }
 
   const loadCategories = async (collages) => {
     let foundCategories = new Set();
@@ -74,14 +64,13 @@ const GrwmContainer = () => {
 
   }
 
-  const submitPreferences = async ()=> {
-    const response = await fetch("http://localhost:8080/collages/category?category=" + occasion)
-    const data = await response.json() 
+  const submitPreferences = async () => {
+    const response = await fetch("http://localhost:8080/collages/category?category=" + category)
+    const data = await response.json()
     setSuggestedCollages(data);
-    // fetch collages/categories and pass in the category based on the occasion state at the top
   }
-  
-  const groupByUserInput = ({submitPreferences}) => {
+
+  const groupByUserInput = ({ submitPreferences }) => {
     return collages.filter((collage) => {
       return collage.Category === submitPreferences
     })
@@ -106,7 +95,7 @@ const GrwmContainer = () => {
         },
         {
           path: "/formOne",
-          element: <FormOne categories={categories} occasion={occasion} setOccasion={setOccasion} submitPreferences={submitPreferences} />,
+          element: <FormOne categories={categories} category={category} setCategory={setCategory} submitPreferences={submitPreferences} />,
         },
         {
           path: "/finalCollage",
@@ -118,26 +107,13 @@ const GrwmContainer = () => {
   ])
 
   return (
-    // <div className="whole_container">
-    // <RouterProvider router={router}/>
-    // <div className="container_body">
-    //     <div className="container_top">
-    //       <div className="category_container">
-    //         <Category category={"Wedding"} groupByUserInput={submitPreferences} handleAddItemButtonClick={handleAddItemButtonClick}/>
-    //         <Category category={"Casual"} collageList={submitPreferences("CASUAL")} handleAddItemButtonClick={handleAddItemButtonClick} />
-    //         <Category category={"Night-Out"} collageList={submitPreferences("NIGHT_OUT")} handleAddItemButtonClick={handleAddItemButtonClick} />
-    //         <Category category={"Formal"} collageList={submitPreferences("FORMAL")} handleAddItemButtonClick={handleAddItemButtonClick} />
-    //       </div>
-    //     </div>
-    //     </div>
-    // </div>
     <>
-    <RouterProvider router={router}/>
-    
-    {error !== "" && <p>{error}</p>}
+      <RouterProvider router={router} />
+
+      {error !== "" && <p>{error}</p>}
     </>
 
-    
+
   );
 }
 

@@ -20,10 +20,6 @@ const Home = () => {
                         <li>
                             <Link to={"/formOne"}>Form One</Link>
                         </li>
-                        {/* <li>
-                            <Link to={"/finalCollage"}>Final Collage</Link>
-                        </li> */}
-
                     </ul>
                 </nav>
             </header>
