@@ -20,9 +20,9 @@ const Home = () => {
                         <li>
                             <Link to={"/formOne"}>Form One</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to={"/finalCollage"}>Final Collage</Link>
-                        </li>
+                        </li> */}
 
                     </ul>
                 </nav>

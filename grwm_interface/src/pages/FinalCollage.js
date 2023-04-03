@@ -1,15 +1,16 @@
 import CollageList from "../components/CollageList";
+import { useEffect } from "react";
 
 
-const FinalCollage = ({collages, submitPreferences}) => {
-
-  
-
+  const FinalCollage = ({ collages, submitPreference }) => {
+    if (!submitPreference) {
+      return null; // return null if submitPreference is falsy
+    }
   
       return (
-          <div className={`category ${submitPreferences}`}>
+          <div className={`category ${submitPreference}`}>
               <CollageList collages={collages}/>
-              {submitPreferences}
+              {submitPreference}
           </div>
        );
   }

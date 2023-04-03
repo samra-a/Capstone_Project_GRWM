@@ -8,7 +8,7 @@ import {
 import Register from '../pages/Register'
 import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
-import Category from '../components/Category';
+import Category from '../components/FilteredList';
 import CollageList from '../components/CollageList';
 import Collage from '../components/Collage';
 import FormOne from '../pages/FormOne';
