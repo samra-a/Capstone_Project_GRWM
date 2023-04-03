@@ -1,7 +1,7 @@
 const Collage = ({ collage, deleteCollage, addToCollageList }) => {
-    function importAll(r) {
+    function importAll(files) {
         let images = {};
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+        files.keys().map((item, index) => { images[item.replace('./', '')] = files(item); });
         return images;
     }
     const handleAddToCollageList = () => {

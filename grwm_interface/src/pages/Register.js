@@ -1,8 +1,7 @@
-const Register = () => {
-    return ( 
-        <>
-        </>
-     );
-}
- 
-export default Register;
+function Register() {
+    return (
+      <> </>
+    );
+  }
+  
+  export default Register;

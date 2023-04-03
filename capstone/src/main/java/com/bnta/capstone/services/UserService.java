@@ -26,6 +26,11 @@ public class UserService {
         return userRepository.save(userListToUpdate);
     }
 
+    // find all users
+    public List<User> findAllUsers(){
+        return userRepository.findAll();
+    }
+
 
     // find user by id
     public User findUserById (Long id) {
