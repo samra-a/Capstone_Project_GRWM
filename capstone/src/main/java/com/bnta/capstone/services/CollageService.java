@@ -1,6 +1,8 @@
 package com.bnta.capstone.services;
 
 import com.bnta.capstone.enums.Category;
+import com.bnta.capstone.enums.Style;
+import com.bnta.capstone.enums.Weather;
 import com.bnta.capstone.models.Collage;
 import com.bnta.capstone.models.CollageDTO;
 import com.bnta.capstone.models.User;
@@ -27,8 +29,8 @@ public class CollageService {
     }
 
     // findCollageByCategory
-    public List<Collage> filterCollagesByCategory(Category category){
-        return collageRepository.findByCategoryAndStyle(category);
+    public List<Collage> filterCollages(Category category, Style style, Weather weather){
+        return collageRepository.findByCategoryAndStyleAndWeather(category, style, weather);
     }
 
     // get all users lists
