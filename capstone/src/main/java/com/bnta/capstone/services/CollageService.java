@@ -27,8 +27,9 @@ public class CollageService {
     }
 
     // findCollageByCategory
-    public List<Collage> filterCollagesByCategory(Category category){
-        return collageRepository.findByCategory(category);
+    public List<Collage> filterCollagesByCategory(Category category){ //take in all the different ones and pass it in here
+        return collageRepository.findByCategory(category); //change this to make the name of the new derived query
+        // need to add style and fit to each collage
     }
 
     // get all users lists
