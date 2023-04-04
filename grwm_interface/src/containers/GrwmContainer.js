@@ -5,7 +5,6 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import Register from '../pages/Register'
-import SignIn from '../pages/SignIn'
 import Quiz from '../pages/Quiz'
 import FormOne from '../pages/FormOne';
 import FinalCollage from '../pages/FinalCollage';
@@ -13,6 +12,7 @@ import UserAccount from '../pages/UserAccount';
 import { useEffect, useState } from 'react';
 import WeatherForm from '../pages/WeatherForm';
 import StyleForm from '../pages/StyleForm';
+import ColourForm from '../pages/ColourForm';
 
 const GrwmContainer = () => {
 
@@ -29,6 +29,8 @@ const GrwmContainer = () => {
   const [styles, setStyles] = useState([]);
   const [weather, setWeather] = useState("");
   const [weathers, setWeathers] = useState([]);
+  const [colour, setColour] = useState("");
+  const [colours, setColours] = useState([]);
 
   useEffect(() => {
     loadUsers();
@@ -39,6 +41,7 @@ const GrwmContainer = () => {
     loadCategories(collages)
     loadStyles(collages)
     loadWeathers(collages)
+    loadColours(collages)
   }, [collages])
 
   const loadUsers = async () => {
@@ -90,8 +93,17 @@ const GrwmContainer = () => {
 
   }
 
+  const loadColours = async (collages) => {
+    let foundColours = new Set();
+    collages.forEach((collage) => {
+      foundColours.add(collage.colour)
+    })
+    setColours([...foundColours]);
+
+  }
+
   const submitPreferences = async () => {
-    const response = await fetch(`http://localhost:8080/collages?category=${category}&style=${style}&weather=${weather}`)
+    const response = await fetch(`http://localhost:8080/collages?category=${category}&style=${style}&weather=${weather}&colour=${colour}`)
     const data = await response.json()
     setSuggestedCollages(data);
   }
@@ -120,10 +132,6 @@ const GrwmContainer = () => {
           element: <Register />,
         },
         {
-          path: "/signIn",
-          element: <SignIn setCurrentUser={setCurrentUser} users={users} collageList={collageList} />,
-        },
-        {
           path: "/quiz",
           element: <Quiz />,
         },
@@ -132,12 +140,16 @@ const GrwmContainer = () => {
           element: <FormOne categories={categories} category={category} setCategory={setCategory}/>,
         },
         {
-          path: "/StyleForm",
+          path: "/styleForm",
           element: <StyleForm styles={styles} style={style} setStyle={setStyle}/>,
         },
         {
-          path: "/WeatherForm",
-          element: <WeatherForm weathers={weathers} weather={weather} setWeather={setWeather} submitPreferences={submitPreferences} />,
+          path: "/weatherForm",
+          element: <WeatherForm weathers={weathers} weather={weather} setWeather={setWeather} />,
+        },
+        {
+          path: "/colourForm",
+          element: <ColourForm colours={colours} colour={colour} setColour={setColour} submitPreferences={submitPreferences} />,
         },
         {
           path: "/finalCollage",

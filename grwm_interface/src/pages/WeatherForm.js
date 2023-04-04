@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const WeatherForm = ({ weathers, weather, setWeather, submitPreferences }) => {
+const WeatherForm = ({ weathers, weather, setWeather }) => {
   const navigate = useNavigate()
 
   const handleWeatherOptions = (e) => {
@@ -15,19 +15,14 @@ const WeatherForm = ({ weathers, weather, setWeather, submitPreferences }) => {
 
   // What type of occasion are you shopping for?
 
-  const handleClick = async () => {
-    await submitPreferences();
-    navigate("/finalCollage");
-  }
-
   return (
     <div className="Weather">
-      <h2> 1. What Will The Weather Be Like?</h2>
+      <h2> 2. What Will The Weather Be Like for The Occasion You Are Dressing For?</h2>
       <select name="weatherOptions" value={weather} onChange={handleWeatherOptions}>
         <option>Choose an option</option>
         {options}
       </select>
-      <button onClick={handleClick}>Generate Outfits</button>  
+      <button onClick={() => { navigate("/StyleForm")}}>Next Question</button>
     </div>
   );
 }

@@ -12,13 +12,7 @@ const Home = () => {
                             <Link to={"/register"}>Register</Link>
                         </li>
                         <li>
-                            <Link to={"/signIn"}>Sign In</Link>
-                        </li>
-                        <li>
-                            <Link to={"/quiz"}>Quiz</Link>
-                        </li>
-                        <li>
-                            <Link to={"/formOne"}>Form One</Link>
+                            <Link to={"/formOne"}>Quiz</Link>
                         </li>
                         <li>
                             <Link to={"/userAccount"}>Account</Link>

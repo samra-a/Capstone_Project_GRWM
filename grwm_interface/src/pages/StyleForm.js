@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const StyleForm = ({ styles, style, setStyle}) => {
+const StyleForm = ({ styles, style, setStyle, submitPreferences}) => {
   const navigate = useNavigate()
 
   const handleStyleOptions = (e) => {
@@ -8,7 +8,7 @@ const StyleForm = ({ styles, style, setStyle}) => {
   }
 
   const options = styles.map((style, index) => {
-    return <option key={index} value={style}>{style}</option>
+    return <option key={index} value={style}>{style.toLowerCase()}</option>
   })
 
   // string formatting
@@ -17,14 +17,15 @@ const StyleForm = ({ styles, style, setStyle}) => {
 
   return (
     <div className="Style">
-      <h2> 1. What Best Describes Your Style?</h2>
+      <h2> 3. What Best Describes Your Style?</h2>
       <select name="styleOptions" value={style} onChange={handleStyleOptions}>
         <option>Choose an option</option>
         {options}
       </select>
-      <button onClick={() => { navigate("/WeatherForm")}}>Next Question</button>
+      <button onClick={() => { navigate("/ColourForm")}}>Next Question</button>
     </div>
   );
 }
+
 
 export default StyleForm;

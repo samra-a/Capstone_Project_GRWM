@@ -22,7 +22,7 @@ const FormOne = ({ categories, category, setCategory}) => {
         <option>Choose an option</option>
         {options}
       </select>
-      <button onClick={() => { navigate("/StyleForm")}}>Next Question</button>
+      <button onClick={() => { navigate("/WeatherForm")}}>Next Question</button>
     </div>
   );
 }
