@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
-}
+/* _____________HEADER______________ */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*  want to add burger menu and sticky header property if have time */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: white;
+  padding: 20px;
+  /* position: sticky;
+  top: 0;
+  z-index: 1; */
+}
+
+.header-image img {
+  height: 60px; 
+  max-height: 100%;
+  border-radius: 0%;
+}
+
+.header-links-container {
+  display: flex;
+  padding-right: 20px;
+}
+
+.header-links-container a {
+  text-decoration: none;
+  font-size: 18px;
+  color: pink;
+  border: none;
+  padding: 8px 16px;
+}
+
+.header-links-container a:hover {
+  background-color: pink;
   color: white;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-links-container a:last-child {
+  background-color: pink;
+  color: white;
+  border-radius: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-links-container a:last-child:hover {
+  background-color: white;
+  color: pink;
+  border-radius: 50px;
 }
+
+.header-links-container {
+  display: flex;
+  padding-left: 20px;
+}
+
+
+
+

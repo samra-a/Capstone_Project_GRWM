@@ -1,14 +1,17 @@
 import { Link, Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import SubscribeForm from "../components/SubscribeForm";
 
 const Home = () => {
 
     return (
         <>
             <header>
-                <h1></h1>
+                <Header/>
                 <nav>
                     <ul>
-                        <li>
+                        {/* <li>
                             <Link to={"/register"}>Register</Link>
                         </li>
                         <li>
@@ -22,13 +25,17 @@ const Home = () => {
                         </li>
                         <li>
                             <Link to={"/userAccount"}>Account</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             </header>
             <main>
                 <Outlet />
             </main>
+            <footer>
+                <SubscribeForm/>
+                <Footer/>
+            </footer>
         </>
     )
 
