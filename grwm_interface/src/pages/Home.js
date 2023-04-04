@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import MeetTeam from "../components/MeetTeam";
 import SubscribeForm from "../components/SubscribeForm";
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
             </header>
             <main>
                 <Outlet />
+                <MeetTeam/>
             </main>
             <footer>
                 <SubscribeForm/>

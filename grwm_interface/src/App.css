@@ -75,6 +75,130 @@
 
 
 
+/* ____________MEET THE TEAM________________ */
+/* Meet section */
+.meet {
+  /* section style */
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  /* center the title */
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-title .title {
+  /* style title */
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+.section-title .message {
+  /* style message */
+  font-size: 18px;
+  font-weight: 400;
+  color: #777777;
+  line-height: 1.5;
+}
+
+/* Cards*/
+.cards {
+  /* flex the cards */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  /* style card */
+  flex: flex;
+  margin: 30px 10px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  /* style image */
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  object-fit: cover;
+}
+
+.card h3 {
+  /* names */
+  font-size: 22px;
+  color: #4a4a4a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card p {
+  /* info section */
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #777777;
+}
+
+.card ul {
+  /* icons */
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.card ul li {
+  /* icon in line */
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.card ul li a {
+  /* stlye icons */
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.card ul li a svg {
+  /* more icon stlyes */
+  width: 20px;
+  height: 20px;
+  color: rgb(230, 182, 191);
+}
+
+/* Responsive design */
+@media screen and (min-width: 768px) {
+  .cards {
+    margin-top: 0;
+  }
+  .card {
+    flex-basis: calc(25% - 20px);
+    margin: 30px 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card {
+    flex-basis: calc(20% - 20px);
+    margin: 30px 10px;
+  }
+}
+
+
+
+
+
+
 
 /* _____________SUBSCRIBE FORM______________ */
 
