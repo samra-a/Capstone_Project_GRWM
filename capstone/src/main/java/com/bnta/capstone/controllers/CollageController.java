@@ -34,14 +34,6 @@ public class CollageController {
         return new ResponseEntity<>(collages, HttpStatus.OK);
     }
 
-    // findCollageByCategory
-    @GetMapping(value ="/category")
-    public ResponseEntity <List<Collage>> findCollageCategory (@RequestParam(name="category", required = false) Category category){
-        return new ResponseEntity<>(collageService.filterCollagesByCategory(category), HttpStatus.OK); //need to pass in category and style, need more request params
-        //to pass in the brackets on the above line
-    }
-
-
     // get all users lists
     @GetMapping(value ="/users/{userId}")
     public ResponseEntity <List<CollageDTO>> findUserList (@PathVariable Long userId){
