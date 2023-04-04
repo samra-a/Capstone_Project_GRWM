@@ -13,6 +13,8 @@ const Collage = ({ collage, deleteCollage, handleAddToCollageList }) => {
             <h4><strong>Collage: </strong>{collage.name}</h4>
             <p><strong>Description: </strong>{collage.description}</p>
             <p><strong>Category: </strong>{collage.category}</p>
+            <p><strong>Style: </strong>{collage.style}</p>
+            <p><strong>Weather: </strong>{collage.weather}</p>
             <button className="like" onClick={handleAddToCollageList}>LOVE IT!</button>
             <button className="dislike" onClick={() => deleteCollage(collage.collageId)}>NEXT..</button>
         </div>
