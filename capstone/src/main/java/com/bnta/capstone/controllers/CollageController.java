@@ -20,7 +20,10 @@ public class CollageController {
 
     //findAllCollages
     @GetMapping
-    public ResponseEntity<List<Collage>> findCollages (){
+    public ResponseEntity<List<Collage>> findCollages (@RequestParam(name="category", required = false) Category category){
+        if (category != null) {
+            return new ResponseEntity<>(collageService.filterCollagesByCategory(category), HttpStatus.OK);
+        }
         List<Collage> collages = collageService.findAllCollages();
         if (collages == null) {return new ResponseEntity<>( HttpStatus.NO_CONTENT);}
         return new ResponseEntity<>(collages, HttpStatus.OK);
@@ -32,6 +35,7 @@ public class CollageController {
         return new ResponseEntity<>(collageService.filterCollagesByCategory(category), HttpStatus.OK); //need to pass in category and style, need more request params
         //to pass in the brackets on the above line
     }
+
 
     // get all users lists
     @GetMapping(value ="/users/{userId}")
