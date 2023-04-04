@@ -27,33 +27,141 @@
 .header-links-container a {
   text-decoration: none;
   font-size: 18px;
-  color: pink;
+  color: rgb(230, 182, 191);
   border: none;
   padding: 8px 16px;
 }
 
 .header-links-container a:hover {
-  background-color: pink;
+  background-color: rgb(230, 182, 191);
   color: white;
   transition: background-color 0.3s ease-in-out;
   border-radius: 50px;
 }
 
 .header-links-container a:last-child {
-  background-color: pink;
+  background-color: rgb(230, 182, 191);
   color: white;
   border-radius: 50px;
 }
 
 .header-links-container a:last-child:hover {
   background-color: white;
-  color: pink;
+  color: rgb(230, 182, 191);
   border-radius: 50px;
 }
 
-.header-links-container {
+@media only screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+  .header-links-container {
+    padding: 10px 0;
+  }
+  
+  .header-links-container a {
+    margin: 5px 0;
+  }
+}
+
+
+
+
+
+/* _____________SUBSCRIBE FORM______________ */
+
+.subscribe {
+  background-color: #ffe9eb;
+  padding: 30px;
   display: flex;
-  padding-left: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.subscribe-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form h2 {
+  font-size: 30px;
+  color: 	#ffa447;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subscribe-form p {
+  font-size: 18px;
+  color: 	#ffa447;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subscribe-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form input[type="text"] {
+  font-size: 16px;
+  color: gray;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.subscribe-form input[type="submit"] {
+  font-size: 16px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffb972;
+  cursor: pointer;
+}
+
+.subscribe-form input[type="submit"]:hover {
+  background-color: #ffa447;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe {
+    flex-direction: row;
+  }
+
+  .subscribe-form {
+    width: 50%;
+  }
+
+  .subscribe-form h2,
+  .subscribe-form p {
+    text-align: left;
+  }
+
+  .subscribe-form form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .subscribe-form input[type="text"] {
+    margin-bottom: 0;
+    margin-right: 10px;
+    max-width: 170px;
+  }
 }
 
 

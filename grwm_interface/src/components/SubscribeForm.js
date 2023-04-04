@@ -15,20 +15,23 @@ const SubscribeForm = () => {
         }
     }
 
+    const subscribersList = subscribedUsers.map(user => <li key={user}>{user}</li>)
+
     return (
         <div className="subscribe">
             <div className="subscribe-form">
-                <h2>Subscribe to the GRWM Newsletter</h2>
+                <h2>Do you want to be the best styled at every event?</h2>
+                <p>Subscribe to our GRWM Newsletter</p>
                 <form onSubmit={handleEmailSubmit}>
-                    <label>Email:
-                        <input type="text" value={email} onChange={e => setEmail(e.target.value)}/>
+                    <label>
+                        <input type="text" value={email} placeholder="Enter Email" onChange={e => setEmail(e.target.value)}/>
                     </label>
                     <input type="submit" value="Subscribe" />
                 </form>
             </div>
 
             <div className="subscribed-users">
-                <ul>{subscribedUsers.map(user => <li key={user}>{user}</li>)}</ul>
+                <ul></ul>
             </div>
         </div>
     )
