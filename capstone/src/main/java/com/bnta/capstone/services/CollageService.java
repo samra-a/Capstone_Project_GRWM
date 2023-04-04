@@ -28,7 +28,7 @@ public class CollageService {
 
     // findCollageByCategory
     public List<Collage> filterCollagesByCategory(Category category){
-        return collageRepository.findByCategory(category);
+        return collageRepository.findByCategoryAndStyle(category);
     }
 
     // get all users lists

@@ -13,6 +13,7 @@ public interface CollageRepository extends JpaRepository<Collage, Long> {
 
     // filter collage by category
      List<Collage> findByCategory(Category category);
+     List<Collage> findByCategoryAndStyle(Category category, Style style);
 
      List<Collage> findByUsers(User user);
 

@@ -20,16 +20,13 @@ public class CollageController {
 
     //findAllCollages
     @GetMapping
-    public ResponseEntity<List<Collage>> findCollages (){
+    public ResponseEntity<List<Collage>> findCollages (@RequestParam(name="category", required = false) Category category){
+        if (category != null) {
+            return new ResponseEntity<>(collageService.filterCollagesByCategory(category), HttpStatus.OK);
+        }
         List<Collage> collages = collageService.findAllCollages();
         if (collages == null) {return new ResponseEntity<>( HttpStatus.NO_CONTENT);}
         return new ResponseEntity<>(collages, HttpStatus.OK);
-    }
-
-    // findCollageByCategory
-    @GetMapping(value ="/category")
-    public ResponseEntity <List<Collage>> findCollageCategory (@RequestParam(name="category", required = false) Category category){
-        return new ResponseEntity<>(collageService.filterCollagesByCategory(category), HttpStatus.OK);
     }
 
     // get all users lists

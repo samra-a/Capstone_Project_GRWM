@@ -1,6 +1,8 @@
 package com.bnta.capstone.components;
 
 import com.bnta.capstone.enums.Category;
+import com.bnta.capstone.enums.Style;
+import com.bnta.capstone.enums.Weather;
 import com.bnta.capstone.models.Collage;
 import com.bnta.capstone.models.User;
 import com.bnta.capstone.repositories.CollageRepository;
@@ -30,15 +32,15 @@ public class DataLoader implements ApplicationRunner {
 //        NIGHT OUT Collages
         Collage collageNO1 = new Collage("Downtown Chic", "Pieces like leather " +
                 "jackets, distressed denim, ankle boots, graphic tees, and statement accessories" +
-                " like bold necklaces or chandelier earrings.", Category.NIGHT_OUT);
+                " like bold necklaces or chandelier earrings.", Category.NIGHT_OUT, Style.CASUAL, Weather.SUNNY);
 
         Collage collageNO2 = new Collage("Glam Squad", "Sequined or metallic dresses, " +
                 "stiletto heels, statement clutches, and bold jewelry like chandelier earrings or " +
-                "statement necklaces.", Category.NIGHT_OUT);
+                "statement necklaces.", Category.NIGHT_OUT, Style.GLAM, Weather.UNKNOWN);
 
         Collage collageNO3 = new Collage("Club Hopper", "Bodycon dresses, crop tops, " +
                 "high-waisted skirts, platform heels, and bold makeup like smokey eyes or bold " +
-                "lipstick.", Category.NIGHT_OUT);
+                "lipstick.", Category.NIGHT_OUT, Style.CASUAL, Weather.UNKNOWN);
 
         Collage collageNO4 = new Collage("Rooftop Romance", "Flowing maxi dresses, " +
                 "delicate lace tops, high-waisted trousers, strap sandals, and delicate jewelry like " +

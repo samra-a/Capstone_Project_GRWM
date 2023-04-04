@@ -1,6 +1,8 @@
 package com.bnta.capstone.models;
 
 import com.bnta.capstone.enums.Category;
+import com.bnta.capstone.enums.Style;
+import com.bnta.capstone.enums.Weather;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -28,11 +30,17 @@ public class Collage {
 
     @Enumerated(EnumType.ORDINAL)
     private Category category;
+    @Enumerated(EnumType.ORDINAL)
+    private Style style;
+    @Enumerated(EnumType.ORDINAL)
+    private Weather weather;
 
-    public Collage(String name, String description, Category category){
+    public Collage(String name, String description, Category category, Style style, Weather weather){
         this.name = name;
         this.description = description;
         this.category = category;
+        this.style = style;
+        this.weather = weather;
         this.users = new ArrayList<>();
     }
 
