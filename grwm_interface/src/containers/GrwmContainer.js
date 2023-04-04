@@ -116,7 +116,7 @@ const GrwmContainer = () => {
         {
           path: "/userAccount",
           element: <UserAccount users={users} currentUser={currentUser} setCurrentUser={setCurrentUser} collageList={collageList} 
-          setCollageList={setCollageList} collages={collages} getUserById={getUserById}/>
+          setCollageList={setCollageList} collages={collages}/>
         }
       ]
     },
