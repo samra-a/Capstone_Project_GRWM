@@ -21,9 +21,10 @@ const MeetTeam = () => {
             <img src={Aya} alt="team" />
             <h3 className="name">Aya Hezam</h3>
             <p className="job">CEO</p>
-            <p className="info">
+            <p className="email">
               aya@bnta.com
             </p>
+            <p className="quote">"Self-care is giving the world the best of you, instead of what's left of you."</p>
 
             <ul className="icons">
               <li>
@@ -65,10 +66,10 @@ const MeetTeam = () => {
             <img src={Diana} alt="team" />
             <h3 className="name">Diana Eboh</h3>
             <p className="job">CEO</p>
-            <p className="info">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut consequat.
+            <p className="email">
+              diana@bnta.com
             </p>
+            <p className="quote">"Caring for myself is not self-indulgence, it is self-preservation, and that is an act of political warfare."</p>
 
             <ul className="icons">
               <li>
@@ -110,10 +111,10 @@ const MeetTeam = () => {
             <img src={Samra} alt="team" />
             <h3 className="name">Samra Afzaal</h3>
             <p className="job">CEO</p>
-            <p className="info">
-              Brunch raclette vexillologist post-ironic glossier ennui godard
-              pour-over humblebrag.
+            <p className="email">
+              samra@bnta.com
             </p>
+            <p className="quote">"Self-care is not a luxury. It's an investment in your most important asset - yourself."</p>
 
             <ul className="icons">
               <li>
@@ -155,10 +156,10 @@ const MeetTeam = () => {
             <img src={Chinika} alt="team" />
             <h3 className="name">Chinika Charles</h3>
             <p className="job">CEO</p>
-            <p className="info">
-              Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-              cerebro.
+            <p className="email">
+              chinika@bnta.com
             </p>
+            <p className="quote">"You can't pour from an empty cup. Take care of yourself first." </p>
 
             <ul className="icons">
               <li>
