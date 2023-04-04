@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
-const WeatherForm = ({ weathers, weather, setWeather }) => {
+const WeatherForm = ({ weatherTypes, weather, setWeather }) => {
   const navigate = useNavigate()
 
   const handleWeatherOptions = (e) => {
     setWeather(e.target.value);
   }
 
-  const options = weathers.map((weather, index) => {
+  const options = weatherTypes.map((weather, index) => {
     return <option key={index} value={weather}>{weather.toLowerCase()}</option>
   })
 

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const StyleForm = ({ styles, style, setStyle, submitPreferences}) => {
+const StyleForm = ({ styles, style, setStyle}) => {
   const navigate = useNavigate()
 
   const handleStyleOptions = (e) => {
@@ -17,7 +17,7 @@ const StyleForm = ({ styles, style, setStyle, submitPreferences}) => {
 
   return (
     <div className="Style">
-      <h2> 3. What Best Describes Your Style?</h2>
+      <h2> 3. Which Option Best Describes Your Style?</h2>
       <select name="styleOptions" value={style} onChange={handleStyleOptions}>
         <option>Choose an option</option>
         {options}

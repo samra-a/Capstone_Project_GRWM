@@ -28,7 +28,7 @@ const GrwmContainer = () => {
   const [style, setStyle] = useState("");
   const [styles, setStyles] = useState([]);
   const [weather, setWeather] = useState("");
-  const [weathers, setWeathers] = useState([]);
+  const [weatherTypes, setWeatherTypes] = useState([]);
   const [colour, setColour] = useState("");
   const [colours, setColours] = useState([]);
 
@@ -40,7 +40,7 @@ const GrwmContainer = () => {
   useEffect(() => {
     loadCategories(collages)
     loadStyles(collages)
-    loadWeathers(collages)
+    loadWeatherTypes(collages)
     loadColours(collages)
   }, [collages])
 
@@ -84,12 +84,12 @@ const GrwmContainer = () => {
 
   }
 
-  const loadWeathers = async (collages) => {
-    let foundWeathers = new Set();
+  const loadWeatherTypes = async (collages) => {
+    let foundWeatherTypes = new Set();
     collages.forEach((collage) => {
-      foundWeathers.add(collage.weather)
+      foundWeatherTypes.add(collage.weather)
     })
-    setWeathers([...foundWeathers]);
+    setWeatherTypes([...foundWeatherTypes]);
 
   }
 
@@ -145,7 +145,7 @@ const GrwmContainer = () => {
         },
         {
           path: "/weatherForm",
-          element: <WeatherForm weathers={weathers} weather={weather} setWeather={setWeather} />,
+          element: <WeatherForm weatherTypes={weatherTypes} weather={weather} setWeather={setWeather} />,
         },
         {
           path: "/colourForm",
