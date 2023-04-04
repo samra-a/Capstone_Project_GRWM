@@ -11,7 +11,8 @@ import FormOne from '../pages/FormOne';
 import FinalCollage from '../pages/FinalCollage';
 import UserAccount from '../pages/UserAccount';
 import { useEffect, useState } from 'react';
-
+import WeatherForm from '../pages/WeatherForm';
+import StyleForm from '../pages/StyleForm';
 
 const GrwmContainer = () => {
 
@@ -24,6 +25,10 @@ const GrwmContainer = () => {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState("");
   const [suggestedCollages, setSuggestedCollages] = useState([]);
+  const [style, setStyle] = useState("");
+  const [styles, setStyles] = useState([]);
+  const [weather, setWeather] = useState("");
+  const [weathers, setWeathers] = useState([]);
 
   useEffect(() => {
     loadUsers();
@@ -32,6 +37,8 @@ const GrwmContainer = () => {
 
   useEffect(() => {
     loadCategories(collages)
+    loadStyles(collages)
+    loadWeathers(collages)
   }, [collages])
 
   const loadUsers = async () => {
@@ -56,7 +63,6 @@ const GrwmContainer = () => {
     };
   }
 
-
   const loadCategories = async (collages) => {
     let foundCategories = new Set();
     collages.forEach((collage) => {
@@ -66,8 +72,26 @@ const GrwmContainer = () => {
 
   }
 
+  const loadStyles = async (collages) => {
+    let foundStyles = new Set();
+    collages.forEach((collage) => {
+      foundStyles.add(collage.style)
+    })
+    setStyles([...foundStyles]);
+
+  }
+
+  const loadWeathers = async (collages) => {
+    let foundWeathers = new Set();
+    collages.forEach((collage) => {
+      foundWeathers.add(collage.weather)
+    })
+    setWeathers([...foundWeathers]);
+
+  }
+
   const submitPreferences = async () => {
-    const response = await fetch("http://localhost:8080/collages/category?category=" + category)
+    const response = await fetch(`http://localhost:8080/collages?category=${category}&style=${style}&weather=${weather}`)
     const data = await response.json()
     setSuggestedCollages(data);
   }
@@ -105,7 +129,15 @@ const GrwmContainer = () => {
         },
         {
           path: "/formOne",
-          element: <FormOne categories={categories} category={category} setCategory={setCategory} submitPreferences={submitPreferences} />,
+          element: <FormOne categories={categories} category={category} setCategory={setCategory}/>,
+        },
+        {
+          path: "/StyleForm",
+          element: <StyleForm styles={styles} style={style} setStyle={setStyle}/>,
+        },
+        {
+          path: "/WeatherForm",
+          element: <WeatherForm weathers={weathers} weather={weather} setWeather={setWeather} submitPreferences={submitPreferences} />,
         },
         {
           path: "/finalCollage",

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Collage from "../components/Collage";
 
 
-  const FinalCollage = ({ collages, submitPreferences, postCollageToUser, collageList }) => {
+  const FinalCollage = ({ collages, submitPreferences, postCollageToUser}) => {
 
     const [chosenIndex, setChosenIndex] = useState(0);
     const nextIndex = ()=> {
@@ -15,7 +15,6 @@ import Collage from "../components/Collage";
       console.log("This collage has successfully been added to your list!")
       postCollageToUser(collages[chosenIndex]);
       nextIndex();
-      // collageList.set()
   };
 
     console.log(collages);
@@ -26,7 +25,6 @@ import Collage from "../components/Collage";
           <div className={`category ${submitPreferences}`}>
                {collages && collages.length > 0 && collages[chosenIndex].name ? <Collage deleteCollage={nextIndex} 
                handleAddToCollageList={handleAddToCollageList} collage={collages[chosenIndex]}/> : <></>}
-               {/* {submitPreferences} */}
           </div>
        );
   }

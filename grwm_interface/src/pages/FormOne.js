@@ -1,8 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-
-const FormOne = ({ categories, category, setCategory, submitPreferences }) => {
+const FormOne = ({ categories, category, setCategory}) => {
   const navigate = useNavigate()
 
   const handleCategoryOptions = (e) => {
@@ -17,11 +15,6 @@ const FormOne = ({ categories, category, setCategory, submitPreferences }) => {
 
   // What type of occasion are you shopping for?
 
-  const handleClick = async () => {
-    await submitPreferences();
-    navigate("/finalCollage");
-  }
-
   return (
     <div className="Occasion">
       <h2> 1. What Type of Occasion Are You Shopping For?</h2>
@@ -29,9 +22,7 @@ const FormOne = ({ categories, category, setCategory, submitPreferences }) => {
         <option>Choose an option</option>
         {options}
       </select>
-      <button onClick={handleClick}>Next Question</button>  
-      {/* final form will use the above line with submit preferences and can naviagate to another page */}
-      {/* <button onClick={() => { navigate("/formTwo")}}>Next Question</button> */}
+      <button onClick={() => { navigate("/StyleForm")}}>Next Question</button>
     </div>
   );
 }
