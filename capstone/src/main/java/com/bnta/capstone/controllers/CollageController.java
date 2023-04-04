@@ -1,6 +1,7 @@
 package com.bnta.capstone.controllers;
 
 import com.bnta.capstone.enums.Category;
+import com.bnta.capstone.enums.Colour;
 import com.bnta.capstone.enums.Style;
 import com.bnta.capstone.enums.Weather;
 import com.bnta.capstone.models.Collage;
@@ -25,9 +26,10 @@ public class CollageController {
     public ResponseEntity<List<Collage>> findCollages
     (@RequestParam(name="category", required = false) Category category,
      @RequestParam(name="style", required = false) Style style,
-     @RequestParam(name="weather", required = false) Weather weather){
+     @RequestParam(name="weather", required = false) Weather weather,
+     @RequestParam(name="colour", required = false) Colour colour){
         if (category != null && style != null && weather !=null) {
-            return new ResponseEntity<>(collageService.filterCollages(category, style, weather), HttpStatus.OK);
+            return new ResponseEntity<>(collageService.filterCollages(category, style, weather, colour), HttpStatus.OK);
         }
         List<Collage> collages = collageService.findAllCollages();
         if (collages == null) {return new ResponseEntity<>( HttpStatus.NO_CONTENT);}

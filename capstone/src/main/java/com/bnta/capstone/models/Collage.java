@@ -1,6 +1,7 @@
 package com.bnta.capstone.models;
 
 import com.bnta.capstone.enums.Category;
+import com.bnta.capstone.enums.Colour;
 import com.bnta.capstone.enums.Style;
 import com.bnta.capstone.enums.Weather;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -35,12 +36,16 @@ public class Collage {
     @Enumerated(EnumType.ORDINAL)
     private Weather weather;
 
-    public Collage(String name, String description, Category category, Style style, Weather weather){
+    @Enumerated(EnumType.ORDINAL)
+    private Colour colour;
+
+    public Collage(String name, String description, Category category, Style style, Weather weather, Colour colour){
         this.name = name;
         this.description = description;
         this.category = category;
         this.style = style;
         this.weather = weather;
+        this.colour = colour;
         this.users = new ArrayList<>();
     }
 
@@ -100,5 +105,13 @@ public class Collage {
 
     public void setWeather(Weather weather) {
         this.weather = weather;
+    }
+
+    public Colour getColour() {
+        return colour;
+    }
+
+    public void setColour(Colour colour) {
+        this.colour = colour;
     }
 }

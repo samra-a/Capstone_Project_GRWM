@@ -1,6 +1,7 @@
 package com.bnta.capstone.models;
 
 import com.bnta.capstone.enums.Category;
+import com.bnta.capstone.enums.Colour;
 import com.bnta.capstone.enums.Style;
 import com.bnta.capstone.enums.Weather;
 import jakarta.persistence.EnumType;
@@ -17,15 +18,19 @@ public class CollageDTO {
     private Style style;
     @Enumerated(EnumType.ORDINAL)
     private Weather weather;
+    @Enumerated(EnumType.ORDINAL)
+    private Colour colour;
 
 
-    public CollageDTO(long collageId, String name, String description, Category category, Style style, Weather weather) {
+    public CollageDTO(long collageId, String name, String description, Category category, Style style,
+                      Weather weather, Colour colour) {
         this.collageId = collageId;
         this.name = name;
         this.description = description;
         this.category = category;
         this.style = style;
         this.weather = weather;
+        this.colour = colour;
     }
 
     public long getCollageId() {
@@ -74,5 +79,13 @@ public class CollageDTO {
 
     public void setWeather(Weather weather) {
         this.weather = weather;
+    }
+
+    public Colour getColour() {
+        return colour;
+    }
+
+    public void setColour(Colour colour) {
+        this.colour = colour;
     }
 }
