@@ -2,26 +2,9 @@ import React, { useEffect } from "react";
 import CollageList from "../components/CollageList";
 import { NavLink } from "react-router-dom";
 
-const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollageList, collages}) => {
+const UserAccount = ({user, users, currentUser, setCurrentUser, collageList, setCollageList, collages, getUserById}) => {
 
-    // useEffect(() => {
-    //     getCollages();
-    // }, [])
-
-
-    // const getCollages = () => {
-    //     if (currentUser != null) {
-    //         const userCollagesIds = collageList.map((collage) => {
-    //             if (collage.user.id === currentUser.id) {
-    //                 return collage.id
-    //             }
-    //         })
-       
-    //         const userCollages = collages.filter((collage) => { return userCollagesIds.includes(collage.id) });
-    //         setCollageList(userCollages);
-    //     }
-    // }
-
+    
     const handleLogIn = (e) => {
         //find the user to log in
         const userToLogIn = users.filter(user => user.id == e.target.value);
@@ -31,7 +14,6 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
             if (collage.user.id == e.target.value) {
                 return collage.id
             }
-            // getUserById(user);
         })
 
         //retrieve a collage once from the collages array

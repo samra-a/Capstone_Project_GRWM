@@ -86,7 +86,6 @@ const GrwmContainer = () => {
   }
 };
 
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -117,7 +116,7 @@ const GrwmContainer = () => {
         {
           path: "/userAccount",
           element: <UserAccount users={users} currentUser={currentUser} setCurrentUser={setCurrentUser} collageList={collageList} 
-          setCollageList={setCollageList} collages={collages}/>
+          setCollageList={setCollageList} collages={collages} getUserById={getUserById}/>
         }
       ]
     },
