@@ -3,28 +3,29 @@
 /*  want to add burger menu and sticky header property if have time */
 
 .header {
+  /* style header */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   padding: 20px;
-  /* position: sticky;
-  top: 0;
-  z-index: 1; */
 }
 
 .header-image img {
+  /* style logo */
   height: 60px; 
   max-height: 100%;
   border-radius: 0%;
 }
 
 .header-links-container {
+  /* flex and give padding */
   display: flex;
   padding-right: 20px;
 }
 
 .header-links-container a {
+  /* style header links */
   text-decoration: none;
   font-size: 18px;
   color: rgb(230, 182, 191);
@@ -33,6 +34,7 @@
 }
 
 .header-links-container a:hover {
+  /* hover style */
   background-color: rgb(230, 182, 191);
   color: white;
   transition: background-color 0.3s ease-in-out;
@@ -40,17 +42,20 @@
 }
 
 .header-links-container a:last-child {
+  /* sign up look different*/
   background-color: rgb(230, 182, 191);
   color: white;
   border-radius: 50px;
 }
 
 .header-links-container a:last-child:hover {
+  /* opposite colours on hover for sign up */
   background-color: white;
   color: rgb(230, 182, 191);
   border-radius: 50px;
 }
 
+/* responsiveness */
 @media only screen and (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -74,6 +79,7 @@
 /* _____________SUBSCRIBE FORM______________ */
 
 .subscribe {
+  /* subscribe section style */
   background-color: #ffe9eb;
   padding: 30px;
   display: flex;
@@ -84,6 +90,7 @@
 }
 
 .subscribe-form {
+  /* form style */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -92,6 +99,7 @@
 }
 
 .subscribe-form h2 {
+  /* h2 stlye */
   font-size: 30px;
   color: 	#ffa447;
   margin-bottom: 10px;
@@ -99,6 +107,7 @@
 }
 
 .subscribe-form p {
+  /* p style */
   font-size: 18px;
   color: 	#ffa447;
   margin-bottom: 20px;
@@ -106,6 +115,7 @@
 }
 
 .subscribe-form form {
+  /* flex bar and button */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,6 +123,7 @@
 }
 
 .subscribe-form input[type="text"] {
+  /* email bar style */
   font-size: 16px;
   color: gray;
   padding: 10px;
@@ -125,6 +136,7 @@
 }
 
 .subscribe-form input[type="submit"] {
+  /* subscribe button style */
   font-size: 16px;
   color: white;
   padding: 10px 20px;
@@ -135,9 +147,11 @@
 }
 
 .subscribe-form input[type="submit"]:hover {
+  /* hover to darker orange */
   background-color: #ffa447;
 }
 
+/* responsiveness */
 @media screen and (min-width: 768px) {
   .subscribe {
     flex-direction: row;
@@ -164,6 +178,127 @@
   }
 }
 
+
+
+
+/* _____________FOOTER______________ */
+
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul{
+  /* remove bullet points */
+  list-style: none;
+}
+
+.footer{
+  background-color: #ffffff;
+  padding: 70px 0;
+}
+
+.footer-col{
+  /* move columns right */
+   width: 25%;
+   padding: 0 30px;
+}
+
+.footer-col h4{
+  /* title */
+  font-size: 18px;
+  color: rgb(230, 182, 191);
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before{
+  /* bar under h4s */
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: rgb(208, 121, 135);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+  /* line spacing */
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+  /* style hrefs */
+  font-size: 16px;
+  text-transform: capitalize;
+  color: rgb(230, 182, 191);
+  text-decoration: none;
+  font-weight: 300;
+  color: #939393;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+  /* hover effect*/
+  color: rgb(230, 182, 191);
+  padding-left: 7px;
+}
+
+.social-links a{
+  /* style social icons */
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: rgb(230, 182, 191);
+  transition: all 0.5s ease;
+}
+
+.social-links a:hover{
+  /* change to darker colour on hover */
+  color: rgb(231, 133, 151);
+}
+
+.copyright {
+  /* style copyright */
+  font-size: 14px;
+  color: #939393;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.copyright p {
+  margin: 0;
+  padding: 0;
+}
+
+/*responsiveness*/
+@media screen and (max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media screen and (max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
 
 
 
