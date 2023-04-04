@@ -64,7 +64,7 @@ public class DataLoader implements ApplicationRunner {
         Collage collageNO8 = new Collage("Classic Elegance",
                 "Timeless pieces like little black dresses, pumps, simple clutch bags, and " +
                         "delicate jewelry like pearl earrings or simple bracelets", Category.NIGHT_OUT,
-                Style.ELEGANT, Weather.RAINING, Colour.WARM);
+                Style.ELEGANT, Weather.RAINING, Colour.COOL);
 
         Collage collageNO9 = new Collage("Sophisticated Sparkle",
                 "Chic and refined pieces like midi dresses, strap heels, metallic clutch bags, " +
@@ -89,7 +89,7 @@ public class DataLoader implements ApplicationRunner {
                         "accessories like floral hair pins or drop earrings.", Category.WEDDING,
                 Style.ELEGANT, Weather.SUNNY, Colour.COLOURFUL);
 
-        Collage collageW3 = new Collage("Black Tie Glam",
+        Collage collageW3 = new Collage("Black Tie Glam Wedding",
                 "Formal and elegant pieces like floor-length gowns, statement heels, " +
                         "beaded clutch bags, and statement jewelry like chandelier earrings " +
                         "or layered necklaces.", Category.WEDDING, Style.GLAM, Weather.RAINING, Colour.NEUTRAL);
