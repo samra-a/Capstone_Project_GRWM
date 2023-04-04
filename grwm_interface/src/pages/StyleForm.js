@@ -8,7 +8,7 @@ const StyleForm = ({ styles, style, setStyle}) => {
   }
 
   const options = styles.map((style, index) => {
-    return <option key={index} value={style}></option>
+    return <option key={index} value={style}>{style}</option>
   })
 
   // string formatting
