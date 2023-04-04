@@ -17,5 +17,6 @@ const Collage = ({ collage, deleteCollage, handleAddToCollageList }) => {
             <button className="dislike" onClick={() => deleteCollage(collage.collageId)}>NEXT..</button>
         </div>
     )
+    // rendering users collages, if this is true, don't show the buttons, if false (in the form) then render the buttons
 }
 export default Collage;

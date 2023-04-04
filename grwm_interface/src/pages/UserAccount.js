@@ -4,23 +4,23 @@ import { NavLink } from "react-router-dom";
 
 const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollageList, collages}) => {
 
-    useEffect(() => {
-        getCollages();
-    }, [])
+    // useEffect(() => {
+    //     getCollages();
+    // }, [])
 
 
-    const getCollages = () => {
-        if (currentUser != null) {
-            const userCollagesIds = collageList.map((collage) => {
-                if (collage.user.id === currentUser.id) {
-                    return collage.collage.id
-                }
-            })
+    // const getCollages = () => {
+    //     if (currentUser != null) {
+    //         const userCollagesIds = collageList.map((collage) => {
+    //             if (collage.user.id === currentUser.id) {
+    //                 return collage.id
+    //             }
+    //         })
        
-            const userCollages = collages.filter((collage) => { return userCollagesIds.includes(collage.id) });
-            setCollageList(userCollages);
-        }
-    }
+    //         const userCollages = collages.filter((collage) => { return userCollagesIds.includes(collage.id) });
+    //         setCollageList(userCollages);
+    //     }
+    // }
 
     const handleLogIn = (e) => {
         //find the user to log in
@@ -29,9 +29,11 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
         //get collage Ids
         const userCollagesIds = collageList.map((collage) => {
             if (collage.user.id == e.target.value) {
-                return collage.collage.id
+                return collage.id
             }
+            // getUserById(user);
         })
+
         //retrieve a collage once from the collages array
         const userCollages = collages.filter((collage) => { return userCollagesIds.includes(collage.id) })
         setCollageList(userCollages)
@@ -76,12 +78,13 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
                 </div>
                 <CollageList
                     collages={collageList}
-                    collageList={collageList}
                     currentUser={currentUser}
                 ></CollageList>
             </div>
         );
     }
+
 }
+   
  
 export default UserAccount;
