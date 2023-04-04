@@ -46,7 +46,7 @@ public class CollageService {
 
     // DTO method
     public CollageDTO collageDTOBuilder(Collage collage){
-        return new CollageDTO(collage.getId(), collage.getName(), collage.getDescription(), collage.getCategory());
+        return new CollageDTO(collage.getId(), collage.getName(), collage.getDescription(), collage.getCategory(), collage.getStyle(), collage.getWeather());
     }
 
 

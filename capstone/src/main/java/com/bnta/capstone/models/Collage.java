@@ -85,4 +85,20 @@ public class Collage {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    public Style getStyle() {
+        return style;
+    }
+
+    public void setStyle(Style style) {
+        this.style = style;
+    }
+
+    public Weather getWeather() {
+        return weather;
+    }
+
+    public void setWeather(Weather weather) {
+        this.weather = weather;
+    }
 }
