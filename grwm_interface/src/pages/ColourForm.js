@@ -16,6 +16,8 @@ const ColourForm = ({ colours, colour, setColour, submitPreferences}) => {
     navigate("/finalCollage");
   }
 
+  
+
   // What type of occasion are you shopping for?
 
   return (
