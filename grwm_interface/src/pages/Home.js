@@ -15,8 +15,9 @@ const Home = () => {
                 <Header />
             </header>
             <main>
-                <Outlet />
                 <Hero/>
+                <Outlet />
+                
             </main>
             <footer>
                 <SubscribeForm />
