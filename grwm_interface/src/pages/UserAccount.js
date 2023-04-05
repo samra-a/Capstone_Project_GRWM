@@ -47,6 +47,7 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
     } else {
         return (
             <div className="myAccount">
+                <div className="accountInfo">
                 <h1>My Account</h1>
                 <h2>
                     Hello {currentUser.name}!
@@ -54,7 +55,8 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
                 <div className="myAccountHeadings">
                 <div>
                     Add New Collage to List:
-                    <button> <NavLink to="/FormOne"> Add Collage </NavLink> </button>
+                    <button className="addCollage"> <NavLink to="/FormOne"> Add Collage </NavLink> </button>
+                </div>
                 </div>
                 </div>
                 <CollageList

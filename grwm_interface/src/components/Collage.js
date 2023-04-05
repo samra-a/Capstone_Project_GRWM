@@ -14,8 +14,10 @@ const Collage = ({ collage, deleteCollage, handleAddToCollageList, displayPrefer
     return (
         <div className="collage-card">
             <img id="image" src={pictures[`${collage.name}.png`]} alt={collage.name} />
+            <div className="collage-writing">
             <h4><strong>{collage.name}</strong></h4>
             <p><strong>Description: </strong>{collage.description}</p>
+            </div>
             {displayPreferenceButtons && 
                 <> 
                     <button className="like" onClick={handleAddToCollageList}>LOVE IT!</button>
@@ -23,7 +25,7 @@ const Collage = ({ collage, deleteCollage, handleAddToCollageList, displayPrefer
                 </>}
             {displayRemoveButton &&
             <>
-            <button onClick={handleRemoveClick}>DELETE</button>
+            <button className="remove" onClick={handleRemoveClick}>DELETE</button>
             </>}
 
         </div>
