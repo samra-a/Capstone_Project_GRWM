@@ -1,7 +1,4 @@
 /* _____________HEADER______________ */
-
-/*  want to add burger menu and sticky header property if have time */
-
 .header {
   /* style header */
   display: flex;
@@ -71,6 +68,59 @@
     margin: 5px 0;
   }
 }
+
+
+
+
+
+
+
+
+/* _______________SIGN IN AND SIGN UP___________________ */
+.sign-form {
+  /* stlye form */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px;
+  color: #4a4a4a;
+}
+
+label {
+  /* format input boxes */
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+input {
+  /* style input boxes */
+  padding: 5px;
+  border: 1px solid #4a4a4a;
+  border-radius: 5px;
+}
+
+button {
+  /* button stlye */
+  background-color: #ffb972;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  /* button hover */
+  background-color: #ffa447;
+}
+
+
+
+
+
+
 
 
 
@@ -177,6 +227,10 @@
   color: rgb(230, 182, 191);
 }
 
+.card ul li a svg :hover {
+  color: rgb(231, 133, 151);
+}
+
 /* Responsive design */
 @media screen and (min-width: 768px) {
   .cards {
@@ -194,6 +248,65 @@
   }
 }
 
+
+
+
+
+
+
+
+/* ____________ABOUT_______________ */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about > div {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.about h1 {
+  /* style title */
+  font-size: 36px;
+  line-height: 1.3;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.about p {
+  /* style paragraphs */
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.about div:last-child p {
+  text-align: justify;
+}
+
+/* responsiveness */
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 10px;
+  }
+
+  .about h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .about p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
 
 
 

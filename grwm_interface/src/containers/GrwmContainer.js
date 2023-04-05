@@ -156,6 +156,34 @@ const GrwmContainer = () => {
           path: "/about",
           element: <AboutSection />,
         },
+
+        {
+          path: "/",
+          element: (
+            <>
+              <BlogSection />
+              <MeetTeam />
+            </>
+          ),
+        },
+        {
+          path: "/register",
+          element: <Register />,
+        },
+
+        {
+          path: "/",
+          element: (
+            <>
+              <BlogSection />
+              <MeetTeam />
+            </>
+          ),
+        },
+        {
+          path: "/signIn",
+          element: <SignIn />,
+        },
       ],
     },
   ]);

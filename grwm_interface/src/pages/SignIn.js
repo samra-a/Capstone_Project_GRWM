@@ -1,6 +1,8 @@
+import SignInForm from "../components/SignInForm";
+
 function SignIn() {
     return (
-      <> </>
+      <SignInForm />
     );
   }
   
