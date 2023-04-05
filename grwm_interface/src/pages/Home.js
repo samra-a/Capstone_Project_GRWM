@@ -14,8 +14,8 @@ const Home = () => {
             </header>
             <main>
                 <Outlet />
-                <BlogSection />
-                <MeetTeam />
+                {/* <BlogSection />
+                <MeetTeam /> */}
             </main>
             <footer>
                 <SubscribeForm />

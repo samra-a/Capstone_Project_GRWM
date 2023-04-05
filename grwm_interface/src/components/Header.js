@@ -16,10 +16,10 @@ const Header = () => {
 
       <div className="header-links-container">
         <div className={`header-links ${isMenuOpen ? "open" : ""}`}>
-          <Link to="/Home">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/About">About</Link>
-          <Link to="/Sign In">Account</Link>
-          <Link to="/Sign Up">Sign Up</Link>
+          <Link to="/signIn">Account</Link>
+          <Link to="/register">Sign Up</Link>
         </div>
 
         <div className="header-burger-menu" onClick={toggleMenu}>
