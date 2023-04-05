@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <div className="about">
+    <div className="about" >
       <div>
         <h1>
           How We Started Our Website: A Journey Towards Fashion, Body
