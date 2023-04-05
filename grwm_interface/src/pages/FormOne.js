@@ -11,8 +11,6 @@ const FormOne = ({ categories, category, setCategory}) => {
     return <option key={index} value={category}>{category.toLowerCase()}</option>
   })
 
-  // string formatting
-
   // What type of occasion are you shopping for?
 
   return (

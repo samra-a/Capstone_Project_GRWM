@@ -11,8 +11,6 @@ const StyleForm = ({ styles, style, setStyle}) => {
     return <option key={index} value={style}>{style.toLowerCase()}</option>
   })
 
-  // string formatting
-
   // What type of occasion are you shopping for?
 
   return (

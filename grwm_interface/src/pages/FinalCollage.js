@@ -4,9 +4,7 @@ import Collage from "../components/Collage";
 
   const FinalCollage = ({ collages, submitPreferences, postCollageToUser}) => {
 
-    const [displayButton, setDisplayButton] = useState(true);
     const [chosenIndex, setChosenIndex] = useState(0);
-    const [showButton, setShowButton] = useState(true);
     
     const nextIndex = ()=> {
       if(chosenIndex + 1 < collages.length) {
@@ -31,11 +29,10 @@ import Collage from "../components/Collage";
         <h3>The Outfit Designs We Believe Best Suits Your Style Are:</h3>
           <div className={`category ${submitPreferences}`}>
              {collages && collages.length > 0 && collages[chosenIndex].name ? <Collage deleteCollage={nextIndex} 
-               handleAddToCollageList={handleAddToCollageList} collage={collages[chosenIndex]} displayButtons={true}/> : <></> }
+               handleAddToCollageList={handleAddToCollageList} collage={collages[chosenIndex]} displayPreferenceButtons={true}/> : <></> }
           </div>
           </div>
        );
   }
-
   
   export default FinalCollage;

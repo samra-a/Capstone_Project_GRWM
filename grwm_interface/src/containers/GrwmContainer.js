@@ -17,7 +17,6 @@ import ColourForm from '../pages/ColourForm';
 const GrwmContainer = () => {
 
   const [error, setError] = useState("");
-  const [collage, setCollage] = useState([]);
   const [collageList, setCollageList] = useState([]);
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
@@ -43,6 +42,10 @@ const GrwmContainer = () => {
     loadWeatherTypes(collages)
     loadColours(collages)
   }, [collages])
+
+  useEffect(() => {
+    loadUserCollages()
+  }, [currentUser])
 
   const loadUsers = async () => {
     const response = await fetch("http://localhost:8080/users")
@@ -111,26 +114,34 @@ const GrwmContainer = () => {
   const postCollageToUser = (collage) => {
     if (currentUser !== null) {
       fetch(`http://localhost:8080/users/${currentUser.id}/collages/${collage.id}`, {
-          method: "POST",
-          headers:
-              { "Content-Type": "application/json" },
+        method: "POST",
+        headers:
+          { "Content-Type": "application/json" },
       })
-          .then((response) => response.json())
-          .then((response) => {
-              setCollageList(response.collages);
-          });
-  }
-};
+        .then((response) => response.json())
+        .then((response) => {
+          setCollageList(response.collages);
+        });
+    }
+  };
 
-// const deleteCollageList = (id) => {
-//   fetch(`http://localhost:8080/users/${id}`, {
-//       method: "DELETE",
-//       headers: {"Content-Type": "application/json"},
-// });
+  const deleteCollageFromUser = (id) => {
+    fetch(`http://localhost:8080/users/${currentUser.id}/collage/${id}`, {
+      method: "PUT",
+    });
 
-// setCollage(collage.filter(collage => collage.id !== id))
-// setCollageList(null);
-//   };
+    const updatedCollageList = [...collageList]
+    setCollageList(updatedCollageList.filter(collage => {
+      return collage.id != id
+    }));
+  };
+
+  const loadUserCollages = () => {
+    if (currentUser !== null) {
+  setCollageList(currentUser.collages)
+    }
+  };
+ 
 
   const router = createBrowserRouter([
     {
@@ -147,11 +158,11 @@ const GrwmContainer = () => {
         },
         {
           path: "/formOne",
-          element: <FormOne categories={categories} category={category} setCategory={setCategory}/>,
+          element: <FormOne categories={categories} category={category} setCategory={setCategory} />,
         },
         {
           path: "/styleForm",
-          element: <StyleForm styles={styles} style={style} setStyle={setStyle}/>,
+          element: <StyleForm styles={styles} style={style} setStyle={setStyle} />,
         },
         {
           path: "/weatherForm",
@@ -164,13 +175,13 @@ const GrwmContainer = () => {
         {
           path: "/finalCollage",
           element: <FinalCollage collages={suggestedCollages} submitPreferences={submitPreferences} setCollageList={setCollageList}
-          postCollageToUser={postCollageToUser} 
+            postCollageToUser={postCollageToUser}
           />,
         },
         {
           path: "/userAccount",
-          element: <UserAccount users={users} currentUser={currentUser} setCurrentUser={setCurrentUser} collageList={collageList} 
-          setCollageList={setCollageList} collages={collages}/>
+          element: <UserAccount users={users} currentUser={currentUser} setCurrentUser={setCurrentUser} collageList={collageList}
+            setCollageList={setCollageList} collages={collages} deleteCollageFromUser={deleteCollageFromUser} />
         }
       ]
     },

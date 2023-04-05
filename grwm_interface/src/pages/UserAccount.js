@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
 import CollageList from "../components/CollageList";
 import { NavLink } from "react-router-dom";
 
-const UserAccount = ({user, users, currentUser, setCurrentUser, collageList, setCollageList, collages, getUserById}) => {
+const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollageList, collages, deleteCollageFromUser}) => {
 
     
     const handleLogIn = (e) => {
@@ -61,7 +60,8 @@ const UserAccount = ({user, users, currentUser, setCurrentUser, collageList, set
                 <CollageList
                     collages={collageList}
                     currentUser={currentUser}
-                ></CollageList>
+                    deleteCollageFromUser={deleteCollageFromUser}
+                />
             </div>
         );
     }

@@ -11,8 +11,6 @@ const WeatherForm = ({ weatherTypes, weather, setWeather }) => {
     return <option key={index} value={weather}>{weather.toLowerCase()}</option>
   })
 
-  // string formatting
-
   // What type of occasion are you shopping for?
 
   return (
