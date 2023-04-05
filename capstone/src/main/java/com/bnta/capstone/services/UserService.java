@@ -42,10 +42,6 @@ public class UserService {
         User userCollageToDelete = userRepository.findById(userId).get();
         Collage collageToDelete = collageRepository.findById(collageId).get();
         userCollageToDelete.removeCollageFromUserList(collageToDelete);
-
-        if (userCollageToDelete.getCollages().isEmpty()) {
-            deleteUsersCollageList(userId);
-        }
         userRepository.save(userCollageToDelete);
     }
 

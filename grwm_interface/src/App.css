@@ -487,8 +487,7 @@ button:hover {
 /* responsiveness */
 @media screen and (min-width: 768px) {
   .subscribe {
-    flex-direction: row;
-  }
+    flex-direction: row;}
 
   .subscribe-form {
     width: 50%;
@@ -510,7 +509,6 @@ button:hover {
     max-width: 170px;
   }
 }
-
 
 
 
@@ -720,3 +718,98 @@ ul{
 }
 
 
+.collage-card img{
+  height: 40em;
+  width: 100;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+}
+
+.collage-writing{
+  color: #000000;
+  text-align: center;
+  font-size: 150%;
+}
+
+.like{
+    /* button stlye */
+    background-color: #F79B9B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  .dislike{
+    /* button stlye */
+    background-color: #F79B9B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  .remove{
+    /* button stlye */
+    background-color: #F79B9B;
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    font-size: 120%;
+    border-radius: 5px;
+    text-align: center;
+    margin:auto;
+    display: flex;
+  }
+  .like:hover {
+    /* button hover */
+    background-color: #F38181;
+  }
+  .dislike:hover {
+    /* button hover */
+    background-color: #F38181;
+  }
+  .remove:hover {
+    /* button hover */
+    background-color: #F38181;
+  }
+
+/* .myAccount{
+  text-align: center;
+  font-size: 150%;
+} */
+.accountInfo{
+  text-align:left;
+  margin-left: 2%;
+  font-size: 150%;
+}
+
+.myAccount h1{
+  color: #F38181
+
+}
+
+.myAccount h2{
+  color: #F79B9B;
+}
+
+.myAccountHeadings{
+  color: #F79B9B;
+}
+
+.myAccount button.addCollage{
+  background-color: #FFA447;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px 5px;
+    font-size: 60%;
+    border-radius: 5px;
+    margin-left: 1%;
+    /* text-align: left;
+    display: flex; */
+}
+/* #FFA447 */

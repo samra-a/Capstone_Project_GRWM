@@ -1,21 +1,35 @@
-const Collage = ({ collage, deleteCollage, handleAddToCollageList }) => {
+
+const Collage = ({ collage, deleteCollage, handleAddToCollageList, displayPreferenceButtons, displayRemoveButton, deleteCollageFromUser}) => {
     function importAll(files) {
         let images = {};
-        files.keys().map((item, index) => { images[item.replace('./', '')] = files(item); });
+        files.keys().map((item) => { images[item.replace('./', '')] = files(item); });
         return images;
     }
-    
- 
-    // const pics = importAll(require.context('../pictures', false, /\.(png|jpeg|svg)$/));
+
+    const handleRemoveClick = () => {
+        deleteCollageFromUser(collage.id)
+    }
+
+    const pictures = importAll(require.context('../pictures', false, /\.(png|jpeg|svg)$/));
     return (
         <div className="collage-card">
-            {/* <img id="image" src={pics[`${collage.name}.jpeg`]} alt={collage.name} /> */}
-            <h4><strong>Collage: </strong>{collage.name}</h4>
+            <img id="image" src={pictures[`${collage.name}.png`]} alt={collage.name} />
+            <div className="collage-writing">
+            <h4><strong>{collage.name}</strong></h4>
             <p><strong>Description: </strong>{collage.description}</p>
-            <p><strong>Category: </strong>{collage.category}</p>
-            <button className="like" onClick={handleAddToCollageList}>LOVE IT!</button>
-            <button className="dislike" onClick={() => deleteCollage(collage.collageId)}>NEXT..</button>
+            </div>
+            {displayPreferenceButtons && 
+                <> 
+                    <button className="like" onClick={handleAddToCollageList}>LOVE IT!</button>
+                    <button className="dislike" onClick={() => deleteCollage(collage.collageId)}>NEXT..</button> 
+                </>}
+            {displayRemoveButton &&
+            <>
+            <button className="remove" onClick={handleRemoveClick}>DELETE</button>
+            </>}
+
         </div>
+
     )
 }
 export default Collage;

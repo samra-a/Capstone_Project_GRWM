@@ -2,7 +2,7 @@ package com.bnta.capstone.enums;
 
 public enum Category {
     WEDDING,
-    CASUAL,
+    DAY_OUT,
     FORMAL,
     NIGHT_OUT
 }

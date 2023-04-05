@@ -1,40 +1,40 @@
-import { Link } from "react-router-dom";
 import Body from "../pictures/bodyinclusive.jpeg";
 import Hero1 from "../pictures/hero1.jpg"
 import Quote from "../pictures/quote.png"
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
-    return (
-        <>
-         {/* <h1 className="title">GRWM</h1> */}
-       
+  const navigate = useNavigate()
+  return (
+    <>
       <div className="HeroSection">
-       
+
 
         <div className="picture1">
-            <img src={Body} alt="" className="heroImg" />
-         
+          <img src={Body} alt="" className="heroImg" />
+
         </div>
 
         <div className="hero2">
-            <img src={Hero1} alt="" className="heroImg"/>
+          <img src={Hero1} alt="" className="heroImg" />
 
-            <div>
-            <button className="card_button">Take the Quiz!</button>
+          <div>
+            <button className="card_button" onClick={() => { navigate("/formOne")}}>Take the Quiz!</button>
           </div>
-    
+
         </div>
-        
-  
+
+
         <div className="quote3">
-         
-            <img src={Quote} alt="" className="heroImg"/>
-          
+
+          <img src={Quote} alt="" className="heroImg" />
+
         </div>
       </div>
-      </>
-    );
-  };
-  
+    </>
+  );
+};
+
 
 export default Hero;
 

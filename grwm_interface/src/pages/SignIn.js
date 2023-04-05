@@ -1,8 +1,8 @@
-import SignInForm from "../components/SignInForm";
+import UserAccount from "./UserAccount";
 
 function SignIn() {
     return (
-      <SignInForm />
+      <UserAccount />
     );
   }
   

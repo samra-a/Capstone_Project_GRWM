@@ -15,17 +15,11 @@ const Header = () => {
       </div>
 
       <div className="header-links-container">
-        <div className={`header-links ${isMenuOpen ? "open" : ""}`}>
+        <div className="header-links">
           <Link to="/">Home</Link>
           <Link to="/About">About</Link>
-          <Link to="/signIn">Account</Link>
+          <Link to="/UserAccount">Account</Link>
           <Link to="/register">Sign Up</Link>
-        </div>
-
-        <div className="header-burger-menu" onClick={toggleMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
         </div>
       </div>
     </div>
@@ -34,3 +28,14 @@ const Header = () => {
 
 export default Header;
 
+{/* <ul>
+                        <li>
+                            <Link to={"/register"}>Register</Link>
+                        </li>
+                        <li>
+                            <Link to={"/formOne"}>Quiz</Link>
+                        </li>
+                        <li>
+                            <Link to={"/userAccount"}>Account</Link>
+                        </li>
+                    </ul> */}

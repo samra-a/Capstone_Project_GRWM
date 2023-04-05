@@ -1,27 +1,9 @@
-import React, { useEffect } from "react";
 import CollageList from "../components/CollageList";
 import { NavLink } from "react-router-dom";
 
-const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollageList, collages}) => {
+const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollageList, collages, deleteCollageFromUser}) => {
 
-    useEffect(() => {
-        getCollages();
-    }, [])
-
-
-    const getCollages = () => {
-        if (currentUser != null) {
-            const userCollagesIds = collageList.map((collage) => {
-                if (collage.user.id === currentUser.id) {
-                    return collage.collage.id
-                }
-            })
-       
-            const userCollages = collages.filter((collage) => { return userCollagesIds.includes(collage.id) });
-            setCollageList(userCollages);
-        }
-    }
-
+    
     const handleLogIn = (e) => {
         //find the user to log in
         const userToLogIn = users.filter(user => user.id == e.target.value);
@@ -29,9 +11,10 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
         //get collage Ids
         const userCollagesIds = collageList.map((collage) => {
             if (collage.user.id == e.target.value) {
-                return collage.collage.id
+                return collage.id
             }
         })
+
         //retrieve a collage once from the collages array
         const userCollages = collages.filter((collage) => { return userCollagesIds.includes(collage.id) })
         setCollageList(userCollages)
@@ -64,6 +47,7 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
     } else {
         return (
             <div className="myAccount">
+                <div className="accountInfo">
                 <h1>My Account</h1>
                 <h2>
                     Hello {currentUser.name}!
@@ -71,17 +55,20 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
                 <div className="myAccountHeadings">
                 <div>
                     Add New Collage to List:
-                    <button> <NavLink to="/FormOne"> Add Collage </NavLink> </button>
+                    <button className="addCollage"> <NavLink to="/FormOne"> Add Collage </NavLink> </button>
+                </div>
                 </div>
                 </div>
                 <CollageList
                     collages={collageList}
-                    collageList={collageList}
                     currentUser={currentUser}
-                ></CollageList>
+                    deleteCollageFromUser={deleteCollageFromUser}
+                />
             </div>
         );
     }
+
 }
+   
  
 export default UserAccount;
