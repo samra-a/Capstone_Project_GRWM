@@ -53,7 +53,7 @@ public class UserController {
     }
 
     // delete collage in user list
-    @DeleteMapping(value = "/{userId}/collage/{collageId}")
+    @PutMapping(value = "/{userId}/collage/{collageId}")
     public ResponseEntity deleteCollage(@PathVariable Long userId, @PathVariable Long collageId){
         userService.deleteCollageFromUserList(userId, collageId);
         return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);

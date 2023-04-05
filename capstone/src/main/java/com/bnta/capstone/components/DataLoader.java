@@ -38,7 +38,7 @@ public class DataLoader implements ApplicationRunner {
 
         Collage collageNO2 = new Collage("Glam Squad", "Sequined or metallic dresses, " +
                 "stiletto heels, statement clutches, and bold jewelry like chandelier earrings or " +
-                "statement necklaces.", Category.NIGHT_OUT, Style.GLAM, Weather.UNKNOWN, Colour.COLOURFUL);
+                "statement necklaces.", Category.NIGHT_OUT, Style.GLAM, Weather.CLOUDY, Colour.COLOURFUL);
 
         Collage collageNO3 = new Collage("Club Hopper", "Bodycon dresses, crop tops, " +
                 "high-waisted skirts, platform heels, and bold makeup like smokey eyes or bold " +
@@ -51,7 +51,7 @@ public class DataLoader implements ApplicationRunner {
 
         Collage collageNO5 = new Collage("Vintage Vibes Night Out", "Retro-inspired pieces like polka " +
                 "dot dresses, wide-leg trousers, vintage graphic tees, ankle boots, and funky sunglasses.",
-                Category.NIGHT_OUT, Style.CASUAL, Weather.SUNNY, Colour.COLOURFUL);
+                Category.NIGHT_OUT, Style.GLAM, Weather.CLOUDY, Colour.COLOURFUL);
 
         Collage collageNO6 = new Collage("Pop Princess", "Playful pieces like neon bodycon " +
                 "dresses, graphic tees, platform sneakers, statement belts, and playful hair accessories like " +
@@ -74,7 +74,7 @@ public class DataLoader implements ApplicationRunner {
         Collage collageNO10 = new Collage("After Dark",
                 "Sultry and alluring pieces like bodycon dresses, strap sandals, bold " +
                         "accessories like statement necklaces or cuff bracelets.", Category.NIGHT_OUT,
-                Style.GLAM, Weather.UNKNOWN, Colour.COLOURFUL);
+                Style.GLAM, Weather.CLOUDY, Colour.COLOURFUL);
 
 
 
@@ -101,18 +101,18 @@ public class DataLoader implements ApplicationRunner {
 
         Collage collageW5 = new Collage("Rustic Charm",
                 "Country-inspired pieces like lace dresses, cowboy boots, leather bags, " +
-                        "and turquoise jewelry like necklaces or earrings.", Category.WEDDING, Style.CASUAL,
-                Weather.SNOWING, Colour.NEUTRAL);
+                        "and turquoise jewelry like necklaces or earrings.", Category.WEDDING, Style.ELEGANT,
+                Weather.UNKNOWN, Colour.NEUTRAL);
 
         Collage collageW6 = new Collage("Boho Bliss",
                 "Whimsical pieces like crochet dresses, suede ankle boots, flower crowns, " +
                         "and layered jewelry like beaded necklaces or stacked bracelets.", Category.WEDDING,
-                Style.CASUAL, Weather.CLOUDY, Colour.NEUTRAL);
+                Style.ELEGANT, Weather.UNKNOWN, Colour.NEUTRAL);
 
         Collage collageW7 = new Collage("Vintage Elegance",
                 "Retro-inspired pieces like A-line dresses, kitten heels, vintage clutch bags, " +
                         "and statement jewelry like cocktail rings or brooches.", Category.WEDDING, Style.ELEGANT,
-                Weather.UNKNOWN, Colour.COOL);
+                Weather.UNKNOWN, Colour.NEUTRAL);
 
         Collage collageW8 = new Collage("Modern Minimalism",
                 "Clean and sophisticated pieces like slip dresses, mules, simple clutch bags, " +
