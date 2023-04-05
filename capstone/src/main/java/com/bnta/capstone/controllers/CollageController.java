@@ -28,7 +28,7 @@ public class CollageController {
      @RequestParam(name="style", required = false) Style style,
      @RequestParam(name="weather", required = false) Weather weather,
      @RequestParam(name="colour", required = false) Colour colour){
-        if (category != null && style != null && weather !=null) {
+        if (category != null && style != null && weather !=null && colour !=null) {
             return new ResponseEntity<>(collageService.filterCollages(category, style, weather, colour), HttpStatus.OK);
         }
         List<Collage> collages = collageService.findAllCollages();
