@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import AboutSection from "../components/AboutSection";
 import BlogSection from "../components/BlogSection";
 import MeetTeam from "../components/MeetTeam";
+import Hero from "../components/Hero";
 
 const GrwmContainer = () => {
   const [error, setError] = useState("");
@@ -143,15 +144,7 @@ const GrwmContainer = () => {
           ),
         },
 
-        {
-          path: "/",
-          element: (
-            <>
-              <BlogSection />
-              <MeetTeam />
-            </>
-          ),
-        },
+        
         {
           path: "/about",
           element: <AboutSection />,
@@ -161,6 +154,7 @@ const GrwmContainer = () => {
           path: "/",
           element: (
             <>
+              <Hero/>
               <BlogSection />
               <MeetTeam />
             </>

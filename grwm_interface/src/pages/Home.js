@@ -4,8 +4,6 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MeetTeam from "../components/MeetTeam";
 import SubscribeForm from "../components/SubscribeForm";
-import Hero from "../components/Hero";
-import Hero1 from "../components/Hero";
 
 const Home = () => {
 
@@ -15,7 +13,6 @@ const Home = () => {
                 <Header />
             </header>
             <main>
-                <Hero/>
                 <Outlet />
                 
             </main>

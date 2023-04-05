@@ -410,13 +410,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
 /* _____________SUBSCRIBE FORM______________ */
 .subscribe {
   /* subscribe section style */
@@ -642,21 +635,19 @@ ul{
   .footer-col{
     width: 100%;
 }
+}
+
+/* Hero Section */
+
 .HeroSection {
+  padding: 35px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 1rem ;
 }
 
-.title {
-  font-size: 6rem;
-  position: absolute;
-  text-align: absolute; 
-  top: 50%; 
-  left: 45%; 
-  transform: translate(-50%, -60%); 
-  color: pink;
-}
+
 
 .heroImages {
   display: flex;
@@ -667,7 +658,7 @@ ul{
 
 .heroImg {
   margin: 2rem;
-  border: 7px solid;
+  border: 9px solid;
   border-image-slice: 1;
   border-image-source:linear(
     to bottom,
@@ -678,7 +669,7 @@ ul{
 }
 
 .heroImg:first-of-type {
-  border-color: #fc9090;
+  border-color: #ff9a9a;
 }
 
 .heroImg:last-of-type {
@@ -695,14 +686,14 @@ ul{
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
-  background-color: #f79b9b;
+  background-color: #ffb972;
   color: white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .card_button:hover {
-  background-color:#f6acac;
+  background-color:#ffa447;
   text-decoration-color: #f38181;
 }
 
@@ -729,5 +720,3 @@ ul{
 }
 
 
-
-}
