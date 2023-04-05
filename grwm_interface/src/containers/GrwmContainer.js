@@ -122,6 +122,16 @@ const GrwmContainer = () => {
   }
 };
 
+// const deleteCollageList = (id) => {
+//   fetch(`http://localhost:8080/users/${id}`, {
+//       method: "DELETE",
+//       headers: {"Content-Type": "application/json"},
+// });
+
+// setCollage(collage.filter(collage => collage.id !== id))
+// setCollageList(null);
+//   };
+
   const router = createBrowserRouter([
     {
       path: "/",

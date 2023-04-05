@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.collage-card img{
+  height: 40em;
+  width: 100;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+}
+
