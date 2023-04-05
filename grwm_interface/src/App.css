@@ -36,3 +36,92 @@
     transform: rotate(360deg);
   }
 }
+
+.HeroSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title {
+  font-size: 6rem;
+  position: absolute;
+  text-align: absolute; 
+  top: 50%; 
+  left: 45%; 
+  transform: translate(-50%, -60%); 
+  color: pink;
+}
+
+.heroImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.heroImg {
+  margin: 2rem;
+  border: 7px solid;
+  border-image-slice: 1;
+  border-image-source:linear(
+    to bottom,
+    #ffbfcb 0%,
+    #ff8b94 50%,
+    #f38181 100%
+  );
+}
+
+.heroImg:first-of-type {
+  border-color: #fc9090;
+}
+
+.heroImg:last-of-type {
+  border-color: #fcaa89;
+}
+
+
+.card_button {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: #f79b9b;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.card_button:hover {
+  background-color:#f6acac;
+  text-decoration-color: #f38181;
+}
+
+@media (min-width: 768px) {
+  .heroImages {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .heroImg {
+    margin: 2rem 1rem;
+    max-width: 400px;
+    flex: 1 1 auto;
+  }
+
+  .heroMiddle {
+    order: 2;
+    flex: 1 1 auto;
+  }
+
+  .heroMiddle img {
+    max-width: 600px;
+  }
+}
+
+
+

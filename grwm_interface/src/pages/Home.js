@@ -1,4 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
+import Hero from "../components/Hero";
+import Hero1 from "../components/Hero";
 
 const Home = () => {
 
@@ -28,6 +30,7 @@ const Home = () => {
             </header>
             <main>
                 <Outlet />
+                <Hero/>
             </main>
         </>
     )
