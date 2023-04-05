@@ -14,7 +14,7 @@ const WeatherForm = ({ weatherTypes, weather, setWeather }) => {
   // What type of occasion are you shopping for?
 
   return (
-    <div className="Weather">
+    <div className="weather">
       <h2> 2. What Will The Weather Be Like for The Occasion You Are Dressing For?</h2>
       <select name="weatherOptions" value={weather} onChange={handleWeatherOptions}>
         <option>Choose an option</option>

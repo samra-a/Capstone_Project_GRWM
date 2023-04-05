@@ -14,7 +14,7 @@ const StyleForm = ({ styles, style, setStyle}) => {
   // What type of occasion are you shopping for?
 
   return (
-    <div className="Style">
+    <div className="style">
       <h2> 3. Which Option Best Describes Your Style?</h2>
       <select name="styleOptions" value={style} onChange={handleStyleOptions}>
         <option>Choose an option</option>

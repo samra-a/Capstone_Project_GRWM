@@ -24,9 +24,9 @@ import Collage from "../components/Collage";
 
   
       return (
-        <div>
+        <div className="finalCollage">
           <h2>Thank You for Filling Out The Style Quiz!</h2>
-        <h3>The Outfit Designs We Believe Best Suits Your Style Are:</h3>
+        <h3>The Outfit Designs We Believe Best Suits Your Style Are...</h3>
           <div className={`category ${submitPreferences}`}>
              {collages && collages.length > 0 && collages[chosenIndex].name ? <Collage deleteCollage={nextIndex} 
                handleAddToCollageList={handleAddToCollageList} collage={collages[chosenIndex]} displayPreferenceButtons={true}/> : <></> }

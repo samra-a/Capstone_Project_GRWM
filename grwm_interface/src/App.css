@@ -76,7 +76,7 @@
 
 
 
-/* _______________SIGN IN AND SIGN UP___________________ */
+/* _______________SIGN UP___________________ */
 .sign-form {
   /* stlye form */
   display: flex;
@@ -717,7 +717,10 @@ ul{
   }
 }
 
-
+.collage-card {
+  margin: 3rem;
+  padding: 3rem;
+}
 
 .collage-card img{
   height: 40em;
@@ -725,37 +728,62 @@ ul{
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 8%;
 }
 
 .collage-writing{
-  color: #000000;
+  color: #4a4a4a;
   text-align: center;
   font-size: 150%;
 }
 
+.finalCollage{
+  height: 150%;
+  color: #4a4a4a;
+  background-color: #f5f5f5;
+  
+}
+
+.finalCollage h2{
+  color: #4a4a4a;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 50px;
+}
+
+.finalCollage h3{
+  color: #4a4a4a;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+
 .like{
-    /* button stlye */
     background-color: #F79B9B;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 2rem;
     margin-left: 40px;
+    text-align: center;
+    margin: auto;
+    display: flex;
   }
+
   .dislike{
-    /* button stlye */
     background-color: #F79B9B;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.5rem 1.3rem;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 4rem;
     margin-left: 40px;
+    text-align: center;
+    margin: auto;
+    display: flex;
   }
+
   .remove{
-    /* button stlye */
     background-color: #F79B9B;
     color: white;
     border: none;
@@ -766,69 +794,16 @@ ul{
     margin:auto;
     display: flex;
   }
+
   .like:hover {
-    /* button hover */
     background-color: #F38181;
   }
   .dislike:hover {
-    /* button hover */
     background-color: #F38181;
   }
   .remove:hover {
-    /* button hover */
     background-color: #F38181;
   }
-
- /* .accountInfo{
-  text-align:left;
-  margin-left: 2%;
-  font-size: 150%;
-}
-
-.myAccount h1{
-  color: #F38181
-
-}
-
-.myAccount h2{
-  color: #F79B9B;
-}
-
-.myAccountHeadings{
-  color: #F79B9B;
-}
-
-.myAccount button.addCollage{
-  background-color: #FFA447;
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 8px 5px;
-    font-size: 60%;
-    border-radius: 5px;
-    margin-left: 1%;
-    text-align: left;
-    display: flex; 
- }  */
-
-/* .signIn{
-  display: flex;
-  justify-content: center;
-}
-
-.signIn h1{
-  font-size: 3rem;
-  align-items: center;
-}
-
-.signIn p{
-  font-size: 1.3rem;
-  align-items: center;
-}
-
-.signIn select{
-  font-size: 1rem;
-  align-items: center; */
-/* } */
 
 .signIn {
   display: flex;
@@ -863,7 +838,6 @@ ul{
 .signIn select:focus {
   outline: none;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
-  background-color: #e4adad;
   color: #4a4a4a;
 }
 
@@ -888,18 +862,150 @@ ul{
   margin-bottom: 20px;
 }
 
+.accountTitle h2 {
+  text-align: center;
+  padding-left: 20px;
+  font-size: 35px;
+  text-decoration: underline;
+}
+
 .addCollage {
   background-color: #ffb972;
   color: #fff;
   text-decoration: none;
+  font-size: 15px;
   border: none;
   padding: 10px 20px;
   margin-left: 1%;
   border-radius: 5px;
   cursor: pointer;
+  padding: 1rem;
 }
 
 .addCollage:hover {
   background-color: #FFA447;
 }
-/* #FFA447 */
+
+.occasion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: #4a4a4a;
+  background-color: #f5f5f5;
+}
+
+.occasion select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+}
+
+.occasion select:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  color: #4a4a4a;
+}
+
+.occasion option {
+  font-size: 1.5rem;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: #4a4a4a;
+  background-color: #f5f5f5;
+}
+
+.weather select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+}
+
+.weather select:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  color: #4a4a4a;
+}
+
+.weather option {
+  font-size: 1.5rem;
+}
+
+.style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: #4a4a4a;
+  background-color: #f5f5f5;
+}
+
+.style select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+}
+
+.style select:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  color: #4a4a4a;
+}
+
+.style option {
+  font-size: 1.5rem;
+}
+
+.colour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: #4a4a4a;
+  background-color: #f5f5f5;
+}
+
+.colour select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+}
+
+.colour select:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  color: #4a4a4a;
+}
+
+.colour option {
+  font-size: 1.5rem;
+}

@@ -1,8 +1,9 @@
 import CollageList from "../components/CollageList";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollageList, collages, deleteCollageFromUser}) => {
 
+    const navigate = useNavigate()
     
     const handleLogIn = (e) => {
         //find the user to log in
@@ -55,9 +56,12 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
                 <div className="myAccountHeadings">
                 <div>
                     Add New Collage to List:
-                    <button className="addCollage"> <NavLink to="/FormOne"> Add Collage </NavLink> </button>
+                    <button className="addCollage" onClick={() => { navigate("/formOne")}}> Add Collage </button>
                 </div>
                 </div>
+                </div>
+                <div className="accountTitle">
+                    <h2>My Collage List</h2>
                 </div>
                 <CollageList
                     collages={collageList}

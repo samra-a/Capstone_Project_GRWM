@@ -14,7 +14,7 @@ const FormOne = ({ categories, category, setCategory}) => {
   // What type of occasion are you shopping for?
 
   return (
-    <div className="Occasion">
+    <div className="occasion">
       <h2> 1. What Type of Occasion Are You Shopping For?</h2>
       <select name="categoryOptions" value={category} onChange={handleCategoryOptions}>
         <option>Choose an option</option>
