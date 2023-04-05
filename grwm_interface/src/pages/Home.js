@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MeetTeam from "../components/MeetTeam";
 import SubscribeForm from "../components/SubscribeForm";
+import Hero from "../components/Hero";
+import Hero1 from "../components/Hero";
 
 const Home = () => {
 
@@ -14,8 +16,7 @@ const Home = () => {
             </header>
             <main>
                 <Outlet />
-                {/* <BlogSection />
-                <MeetTeam /> */}
+                <Hero/>
             </main>
             <footer>
                 <SubscribeForm />
