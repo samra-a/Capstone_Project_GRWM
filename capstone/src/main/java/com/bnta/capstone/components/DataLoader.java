@@ -49,7 +49,7 @@ public class DataLoader implements ApplicationRunner {
                 "stud earrings or delicate necklaces.", Category.NIGHT_OUT, Style.ROMANTIC, Weather.SUNNY,
                 Colour.WARM);
 
-        Collage collageNO5 = new Collage("Vintage Vibes", "Retro-inspired pieces like polka " +
+        Collage collageNO5 = new Collage("Vintage Vibes Night Out", "Retro-inspired pieces like polka " +
                 "dot dresses, wide-leg trousers, vintage graphic tees, ankle boots, and funky sunglasses.",
                 Category.NIGHT_OUT, Style.CASUAL, Weather.SUNNY, Colour.COLOURFUL);
 
@@ -214,7 +214,7 @@ public class DataLoader implements ApplicationRunner {
         Collage collageF6 = new Collage("Afternoon Tea",
                 "Ladylike and refined pieces like lace dresses, kitten heels, " +
                         "pearl necklaces, and elegant accessories like silk scarves " +
-                        "or clutch bags.", Category.FORMAL, Style.ELEGANT, Weather.SUNNY, Colour.COOL);
+                        "or clutch bags.", Category.FORMAL, Style.ELEGANT, Weather.SUNNY, Colour.COLOURFUL);
 
         Collage collageF7 = new Collage("Art Gallery Opening",
                 "Creative and edgy pieces like asymmetrical dresses, chunky " +
@@ -225,7 +225,7 @@ public class DataLoader implements ApplicationRunner {
         Collage collageF8 = new Collage("Gala Glam",
                 "Opulent and luxurious pieces like beaded gowns, metallic " +
                         "heels, statement earrings, and sparkling bracelets.", Category.FORMAL, Style.GLAM,
-                Weather.UNKNOWN, Colour.COLOURFUL);
+                Weather.UNKNOWN, Colour.COOL);
 
         Collage collageF9 = new Collage("Winter Wonderland",
                 "Festive and cozy pieces like velvet dresses, fur coats, " +
