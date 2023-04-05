@@ -200,8 +200,112 @@
 
 
 
-/* _____________SUBSCRIBE FORM______________ */
 
+
+
+/* _____________BLOG SECTION________________ */
+.blog {
+  /* flex and position blog */
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  margin-left: 5rem;
+  margin-right: 2rem;
+}
+
+.blog-img {
+  /* image style */
+  width: 100%;
+  max-width: 350px;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+  padding: 50px 0;
+}
+
+.blog-img img {
+  /* control image size */
+  width: 100%;
+  height: auto;
+}
+
+.blog-content {
+  /* how much the flex item with grow relative 
+  to other items, grows to fill available space */
+  flex: 1;
+  padding: 0 2rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+.blog-content .title {
+  /* stle title */
+  font-size: 1.8rem;
+  color: #ffa447;
+  margin-bottom: 1rem;
+}
+
+.blog-content .message {
+  /* stlye message */
+  font-size: 1.2rem;
+  color: #777777;
+  margin-bottom: 2rem;
+}
+
+.blog-content .button {
+  /* stlye button */
+  display: block;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(230, 182, 191);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-content .button:hover {
+  /* move button up on hover */
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content .button a {
+  /* style button writing */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* responsiveness */
+@media screen and (max-width: 768px) {
+  .blog {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .blog-img {
+    margin-right: 0;
+  }
+  
+  .blog-content {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* _____________SUBSCRIBE FORM______________ */
 .subscribe {
   /* subscribe section style */
   background-color: #ffe9eb;

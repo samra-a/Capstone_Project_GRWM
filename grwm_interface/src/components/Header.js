@@ -18,7 +18,7 @@ const Header = () => {
         <div className={`header-links ${isMenuOpen ? "open" : ""}`}>
           <Link to="/Home">Home</Link>
           <Link to="/About">About</Link>
-          <Link to="/Login">Login</Link>
+          <Link to="/Sign In">Account</Link>
           <Link to="/Sign Up">Sign Up</Link>
         </div>
 
