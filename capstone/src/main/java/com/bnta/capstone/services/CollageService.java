@@ -29,7 +29,7 @@ public class CollageService {
         return collageRepository.findAll();
     }
 
-    // findCollageByCategory
+    // findCollages
     public List<Collage> filterCollages(Category category, Style style, Weather weather, Colour colour){
         return collageRepository.findByCategoryAndStyleAndWeatherAndColour(category, style, weather, colour);
     }
