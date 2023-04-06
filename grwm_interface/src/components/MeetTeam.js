@@ -9,7 +9,7 @@ const MeetTeam = () => {
     <section className="meet">
       <div className="container">
         <div className="section-title">
-          <h2 className="title">Meet the team</h2>
+          <h2 className="title">Meet the Team</h2>
           <p className="message">
             These are the faces behind the website and behind the amazing
             styling.

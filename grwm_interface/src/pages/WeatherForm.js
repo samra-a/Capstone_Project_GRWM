@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import weatherIcon from "../pictures/weatherIcon.png"
 
 const WeatherForm = ({ weatherTypes, weather, setWeather }) => {
+  
   const navigate = useNavigate()
 
   const handleWeatherOptions = (e) => {
@@ -15,7 +17,7 @@ const WeatherForm = ({ weatherTypes, weather, setWeather }) => {
 
   return (
     <div className="weather">
-      <h2> 2. What Will The Weather Be Like for The Occasion You Are Dressing For?</h2>
+      <h2> 2. What Will The Weather Be Like for The Occasion You Are Dressing For? <img src={weatherIcon} alt="" className="weatherImg"/></h2>
       <select name="weatherOptions" value={weather} onChange={handleWeatherOptions}>
         <option>Choose an option</option>
         {options}

@@ -109,6 +109,10 @@ const GrwmContainer = () => {
     const response = await fetch(`http://localhost:8080/collages?category=${category}&style=${style}&weather=${weather}&colour=${colour}`)
     const data = await response.json()
     setSuggestedCollages(data);
+    setWeather("");
+    setCategory("");
+    setStyle("");
+    setColour("");
   };
 
   const postCollageToUser = (collage) => {
@@ -155,44 +159,7 @@ const GrwmContainer = () => {
         {
           path: "/quiz",
           element: <Quiz />,
-        },
-        // {
-        //   path: "/formOne",
-        //   element: (
-        //     <FormOne
-        //       categories={categories}
-        //       category={category}
-        //       setCategory={setCategory}
-        //       submitPreferences={submitPreferences}
-        //     />
-        //   ),
-        // },
-        // {
-        //   path: "/finalCollage",
-        //   element: (
-        //     <FinalCollage
-        //       collages={suggestedCollages}
-        //       submitPreferences={submitPreferences}
-        //       setCollageList={setCollageList}
-        //       postCollageToUser={postCollageToUser}
-        //     />
-        //   ),
-        // },
-        // {
-        //   path: "/userAccount",
-        //   element: (
-        //     <UserAccount
-        //       users={users}
-        //       currentUser={currentUser}
-        //       setCurrentUser={setCurrentUser}
-        //       collageList={collageList}
-        //       setCollageList={setCollageList}
-        //       collages={collages}
-        //     />
-        //   ),
-        // },
-
-        
+        },        
         {
           path: "/about",
           element: <AboutSection />,

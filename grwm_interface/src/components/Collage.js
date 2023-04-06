@@ -1,5 +1,6 @@
 
 const Collage = ({ collage, deleteCollage, handleAddToCollageList, displayPreferenceButtons, displayRemoveButton, deleteCollageFromUser}) => {
+    
     function importAll(files) {
         let images = {};
         files.keys().map((item) => { images[item.replace('./', '')] = files(item); });
@@ -11,6 +12,7 @@ const Collage = ({ collage, deleteCollage, handleAddToCollageList, displayPrefer
     }
 
     const pictures = importAll(require.context('../pictures', false, /\.(png|jpeg|svg)$/));
+    
     return (
         <div className="collage-card">
             <img id="image" src={pictures[`${collage.name}.png`]} alt={collage.name} />

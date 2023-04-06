@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import champagne from "../pictures/champagne.png"
 
 const FormOne = ({ categories, category, setCategory}) => {
   const navigate = useNavigate()
@@ -8,14 +9,14 @@ const FormOne = ({ categories, category, setCategory}) => {
   }
 
   const options = categories.map((category, index) => {
-    return <option key={index} value={category}>{category.toLowerCase()}</option>
+    return <option key={index} value={category}>{category.toLowerCase().replace("_", " ")}</option>
   })
 
   // What type of occasion are you shopping for?
 
   return (
     <div className="occasion">
-      <h2> 1. What Type of Occasion Are You Shopping For?</h2>
+      <h2> 1. What Type of Occasion Are You Shopping For? <img src={champagne} alt="" className="occasionImg"/></h2>
       <select name="categoryOptions" value={category} onChange={handleCategoryOptions}>
         <option>Choose an option</option>
         {options}

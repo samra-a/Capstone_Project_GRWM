@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const navigate = useNavigate()
 
   return (
     <div className="header">
       <div className="header-image">
-        <img src="https://i.imgur.com/wDcVWj6.jpg" alt="logo image" height="60" />
+        <img src="https://i.imgur.com/wDcVWj6.jpg" alt="logo image" height="60" onClick={() => { navigate("/")}}/>
       </div>
 
       <div className="header-links-container">
@@ -27,15 +24,3 @@ const Header = () => {
 };
 
 export default Header;
-
-{/* <ul>
-                        <li>
-                            <Link to={"/register"}>Register</Link>
-                        </li>
-                        <li>
-                            <Link to={"/formOne"}>Quiz</Link>
-                        </li>
-                        <li>
-                            <Link to={"/userAccount"}>Account</Link>
-                        </li>
-                    </ul> */}

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import fashion from "../pictures/fashion.png"
 
 const StyleForm = ({ styles, style, setStyle}) => {
   const navigate = useNavigate()
@@ -15,7 +16,7 @@ const StyleForm = ({ styles, style, setStyle}) => {
 
   return (
     <div className="style">
-      <h2> 3. Which Option Best Describes Your Style?</h2>
+      <h2> 3. Which Option Best Describes Your Style? <img src={fashion} alt="" className="styleImg"/></h2>
       <select name="styleOptions" value={style} onChange={handleStyleOptions}>
         <option>Choose an option</option>
         {options}

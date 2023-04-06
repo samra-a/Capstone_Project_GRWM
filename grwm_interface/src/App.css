@@ -6,6 +6,9 @@
   align-items: center;
   background-color: white;
   padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .header-image img {
@@ -13,12 +16,14 @@
   height: 60px; 
   max-height: 100%;
   border-radius: 0%;
+  cursor: pointer;
 }
 
 .header-links-container {
   /* flex and give padding */
   display: flex;
   padding-right: 20px;
+  margin-right: 20px;
 }
 
 .header-links-container a {
@@ -85,6 +90,8 @@
   align-items: center;
   padding: 90px;
   color: #4a4a4a;
+  background-color: #f5f5f5;
+  margin-top: 100px;
 }
 
 label {
@@ -643,6 +650,8 @@ ul{
   flex-direction: row;
   align-items: center;
   margin-left: 1rem ;
+  margin-top:90px;
+  margin-bottom: 50px;
 }
 
 
@@ -680,7 +689,7 @@ ul{
   margin: 2rem auto;
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
@@ -720,6 +729,22 @@ ul{
 .collage-card {
   margin: 3rem;
   padding: 3rem;
+  flex: flex;
+  margin: 30px 10px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.collage-card p {
+  margin: 2rem;
+  padding: rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .collage-card img{
@@ -740,6 +765,7 @@ ul{
   height: 150%;
   color: #4a4a4a;
   background-color: #f5f5f5;
+  margin-top: 100px;
   
 }
 
@@ -760,21 +786,23 @@ ul{
 .like{
     background-color: #F79B9B;
     color: white;
+    font-size: 1.1rem;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    margin-top: 2rem;
     margin-left: 40px;
     text-align: center;
     margin: auto;
     display: flex;
+    margin-bottom: 1rem;
   }
 
   .dislike{
     background-color: #F79B9B;
+    font-size: 1.1rem;
     color: white;
     border: none;
-    padding: 0.5rem 1.3rem;
+    padding: 0.5rem 1.4rem;
     border-radius: 5px;
     margin-top: 4rem;
     margin-left: 40px;
@@ -787,7 +815,7 @@ ul{
     background-color: #F79B9B;
     color: white;
     border: none;
-    padding: 15px 10px;
+    padding: 0.5rem 1.4rem;
     font-size: 120%;
     border-radius: 5px;
     text-align: center;
@@ -846,7 +874,7 @@ ul{
 }
 
 .myAccount {
-  margin-top: 50px;
+  margin-top: 100px;
   color: #4a4a4a;
 }
 
@@ -873,13 +901,10 @@ ul{
   background-color: #ffb972;
   color: #fff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 1rem;
   border: none;
-  padding: 10px 20px;
-  margin-left: 1%;
   border-radius: 5px;
   cursor: pointer;
-  padding: 1rem;
 }
 
 .addCollage:hover {
@@ -894,6 +919,7 @@ ul{
   height: 70vh;
   color: #4a4a4a;
   background-color: #f5f5f5;
+  margin-top: 100px;
 }
 
 .occasion select {
@@ -917,6 +943,13 @@ ul{
   font-size: 1.5rem;
 }
 
+.occasion .occasionImg {
+  height: 40px;
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .weather {
   display: flex;
   flex-direction: column;
@@ -925,6 +958,7 @@ ul{
   height: 70vh;
   color: #4a4a4a;
   background-color: #f5f5f5;
+  margin-top: 100px;
 }
 
 .weather select {
@@ -948,6 +982,12 @@ ul{
   font-size: 1.5rem;
 }
 
+.weather .weatherImg {
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .style {
   display: flex;
   flex-direction: column;
@@ -956,6 +996,7 @@ ul{
   height: 70vh;
   color: #4a4a4a;
   background-color: #f5f5f5;
+  margin-top: 100px;
 }
 
 .style select {
@@ -979,6 +1020,13 @@ ul{
   font-size: 1.5rem;
 }
 
+.style .styleImg {
+  height: 40px;
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .colour {
   display: flex;
   flex-direction: column;
@@ -987,6 +1035,7 @@ ul{
   height: 70vh;
   color: #4a4a4a;
   background-color: #f5f5f5;
+  margin-top: 100px;
 }
 
 .colour select {
@@ -1015,4 +1064,12 @@ ul{
   color: #4a4a4a;
   background-color: #f5f5f5;
   margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.colour .colourImg {
+  height: 40px;
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }

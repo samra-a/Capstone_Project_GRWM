@@ -55,13 +55,12 @@ const UserAccount = ({users, currentUser, setCurrentUser, collageList, setCollag
                 </h2>
                 <div className="myAccountHeadings">
                 <div>
-                    Add New Collage to List:
-                    <button className="addCollage" onClick={() => { navigate("/formOne")}}> Add Collage </button>
+                    <button className="addCollage" onClick={() => { navigate("/formOne")}}>Take Quiz</button>
                 </div>
                 </div>
                 </div>
                 <div className="accountTitle">
-                    <h2>My Collage List</h2>
+                    <h2>Liked Fits</h2>
                 </div>
                 <CollageList
                     collages={collageList}
