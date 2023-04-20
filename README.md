@@ -24,7 +24,7 @@ As part of our Capstone project, we had to create an API and the client-side for
 
 ### 2. Diagrams
 
-## UML:
+#### UML:
 
 ![UML](images/UML.png)
 
