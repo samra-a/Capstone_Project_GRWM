@@ -24,11 +24,12 @@ As part of our Capstone project, we had to create an API and the client-side for
 
 ### 2. Diagrams
 
-#### UML:
+#### UML
+
+Our UML includes our models, enum and service layer. All of our methods are displayed here.
 
 ![UML](images/UML.png)
 
-Our UML includes our models, enum and service layer. All of our methods are displayed above.
 
 ERD:
 
