@@ -43,7 +43,6 @@ Our ERD displays the many-to-many relationship that we had between the collage a
 
 Our wireframe shows what our MVP was, and a rough idea of how we intended our website to look like. We seperated the sections by MVP and extension so we could organise our time better.
 
-![](images/Wireframe%202.png)
 ![Wireframe](images/Wireframe.png)
 
 ### Components Diagram
