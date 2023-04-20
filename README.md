@@ -1,5 +1,7 @@
 # GRWM (Get Ready with Me) Capstone Project 👗
 
+**DISCLAIMER: All images used in this project were for educational purposes only. No Copyright Infringement Intended.**
+
 ## Collaborators
 
 - Chinika Charles (GitHub: [ChinikaC](https://github.com/ChinikaC))
