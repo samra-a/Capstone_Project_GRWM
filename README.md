@@ -16,6 +16,8 @@
 4. Setup Instructions
 5. Future
 
+<hr />
+
 ## 1. Project Description
 
 As part of our Capstone project, we had to create an API and the client-side for the API in less than two weeks. Our group decided to base our project on personalised outfit inspirations, while also promoting body positivity as this is something that we have not seen before and we wanted to set ourselves a challenge. This ‘Get Ready with Me’ website is a styling platform, designed with the user in mind allowing women to embrace their individual sense of style by making chosing an outfit easy. There is a short quiz for the user to fill out and once they have done this, outfit collages will be generated using an algorithm, based on the user's answers.
