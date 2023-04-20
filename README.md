@@ -2,7 +2,7 @@
 
 ## Collaborators
 
-- Chiniks Charles (GitHub: [ChinikaC](https://github.com/ChinikaC))
+- Chinika Charles (GitHub: [ChinikaC](https://github.com/ChinikaC))
 - Aya Hezam (GitHub: [aya-rh](https://github.com/aya-rh))
 - Samra Afzaal (GitHub: [samra-a](https://github.com/samra-a))
 - Diana Eboegbulem (GitHub: [PrincessDiana1](https://github.com/PrincessDiana1))
