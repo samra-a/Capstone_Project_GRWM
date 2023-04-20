@@ -25,22 +25,26 @@ As part of our Capstone project, we had to create an API and the client-side for
 ### **_2. Diagrams_**
 
 UML:
-Our UML includes our models, enum and service layer. All of our methods are displayed above.
 
 ![UML](images/UML.png)
 
+Our UML includes our models, enum and service layer. All of our methods are displayed above.
+
 ERD:
-Our ERD displays the many-to-many relationship that we had between the collage and user - each user could end up with many collages and each collage can be assigned to many users. As a result, we only needed one join table, the 'collageList'.
 
 ![ERD](images/ERD.png)
 
+Our ERD displays the many-to-many relationship that we had between the collage and user - each user could end up with many collages and each collage can be assigned to many users. As a result, we only needed one join table, the 'collageList'.
+
 Wireframe:
-Our wireframe shows what our MVP was, and a rough idea of how we intended our website to look like. We seperated the sections by MVP and extension so we could organise our time better.
 
 ![Wireframe](images/Wireframe.png)
 
+Our wireframe shows what our MVP was, and a rough idea of how we intended our website to look like. We seperated the sections by MVP and extension so we could organise our time better.
+
 Component Diagram:
-Our component diagram showcases the different sections that we had in our JavaScript file. We have our main GRWMContainer, pages and components and how they link to one another.
 
 ![Component Diagram](images/Components.png)
+
+Our component diagram showcases the different sections that we had in our JavaScript file. We have our main GRWMContainer, pages and components and how they link to one another.
 
