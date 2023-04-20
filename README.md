@@ -1,4 +1,4 @@
-# GRWM **_(GET READY WITH ME)_** Capstone Project
+# GRWM **_(GET READY WITH ME)_** Capstone Project 👗
 
 ## Collaborators
 
