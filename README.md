@@ -1,4 +1,4 @@
-# GRWM **_(Get Ready with Me)_** Capstone Project (BNTA) 👗
+# GRWM **_(Get Ready with Me)_** Capstone Project 👗
 
 ## Collaborators
 
