@@ -9,7 +9,7 @@
 
 <br />
 
-Table of Contents:
+## **TABLE OF CONTENTS** 📖
 1. Project Description
 2. Diagrams
 3. Tech Stack
@@ -24,6 +24,23 @@ As part of our Capstone project, we had to create an API and the client-side for
 
 ### **_2. Diagrams_**
 
-Wireframe:
+UML:
+Our UML includes our models, enum and service layer. All of our methods are displayed above.
 
-![Wireframe](images/Screenshot%202023-04-20%20at%2015.40.19.png)
+![UML](images/UML.png)
+
+ERD:
+Our ERD displays the many-to-many relationship that we had between the collage and user - each user could end up with many collages and each collage can be assigned to many users. As a result, we only needed one join table, the 'collageList'.
+
+![ERD](images/ERD.png)
+
+Wireframe:
+Our wireframe shows what our MVP was, and a rough idea of how we intended our website to look like. We seperated the sections by MVP and extension so we could organise our time better.
+
+![Wireframe](images/Wireframe.png)
+
+Component Diagram:
+Our component diagram showcases the different sections that we had in our JavaScript file. We have our main GRWMContainer, pages and components and how they link to one another.
+
+![Component Diagram](images/Components.png)
+
