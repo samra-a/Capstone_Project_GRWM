@@ -43,9 +43,9 @@ Our wireframe shows what our MVP was, and a rough idea of how we intended our we
 
 ![Wireframe](images/Wireframe.png)
 
-### Component Diagram
+### Components Diagram
 
 Our component diagram showcases the different sections that we had in our JavaScript file. We have our main GRWMContainer, pages and components and how they link to one another.
 
-![Component Diagram](images/Components.png)
+![Components Diagram](images/Components.png)
 
