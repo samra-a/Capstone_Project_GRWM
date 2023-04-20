@@ -51,5 +51,5 @@ Our component diagram showcases the different sections that we had in our JavaSc
 
 ![Component Diagram](images/Component.png)
 
-**DISCLAIMER: All images used in this project were for educational purposes only. No Copyright Infringement Intended.**
+**DISCLAIMER:** All images used in this project were for educational purposes only. No Copyright Infringement Intended.
 
