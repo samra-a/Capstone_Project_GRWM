@@ -7,9 +7,7 @@
 - GitHub: [Samra Afzaal](https://github.com/samra-a)
 - GitHub: [Diana Eboegbulem](https://github.com/PrincessDiana1)
 
-![](images/Screenshot%202023-04-20%20at%2016.34.16.png)
-
-<br />
+<hr />
 
 ## Table of Contents
 1. Project Description
