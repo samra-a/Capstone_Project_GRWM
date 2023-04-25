@@ -13,8 +13,9 @@
 1. Project Description
 2. Diagrams
 3. Tech Stack
-4. Setup Instructions
-5. Future
+4. RESTful Route Endpoints
+5. Setup Instructions
+6. Future
 
 <hr />
 
@@ -53,7 +54,38 @@ Our component diagram showcases the different sections that we had in our JavaSc
 
 <hr />
 
-## 4. Setup Instructions 
+## 4. RESTful Route Endpoints
+
+To gain access to the website, use `https://localhost:{port}/{endpoint}` - the default port is 8080. To navigate to the different sections, follow the endpoints below:
+
+Users: 
+
+1. GET http://localhost:8080/users
+This will return all users.
+
+2. GET http://localhost:8080/users/{userId}
+This will return a specific user.
+
+3. POST http://localhost:8080/users/{userId}/collages/{collageId}
+This will add a specific collage, using it's id, to a specific user.
+
+4. PUT http://localhost:8080/users/{userId}/collage/{collageId}
+This will remove a specific collage from the user's list. When the GET request is performed after this to retrieve a specific user, their updated list should display.
+
+5. DELETE http://localhost:8080/users/{userId}
+This will delete a user's whole list of collages.
+
+Collages:
+
+1. GET http://localhost:8080/collages
+This will retrieve all of the collages.
+
+2. GET http://localhost:8080/collages/users/{userId}
+This will retrieve a specific user's list of collages.
+
+<hr />
+
+## 5. Setup Instructions 
 
 Server-side API Instructions:
 1. Ensure the following are installed on your machine:
@@ -62,11 +94,11 @@ Server-side API Instructions:
 - Postman
 - Postico
 
-2. Clone the repository from GitHub. Scroll to the top of this page and click on the green Code button. Ensure SSH is selected and copy the link provided. In your terminal, perform the following command:
-`git clone git@github.com:aya-rh/Capstone_Project_GRWM.git`
+2. Clone the repository from GitHub. Scroll to the top of this page and click on the green Code button. Ensure SSH is selected and copy the link provided, or you can copy the link here: `git@github.com:samra-a/Capstone_Project_GRWM.git`. In your terminal, perform the following command:
+`git clone git@github.com:samra-a/Capstone_Project_GRWM.git`
 
 3. Create a new PostgreSQL database named 'grwm_capstone' anywhere in your terminal.
-`create db grwm_capstone`
+`createdb grwm_capstone`
 
 4. Via Intellij IDEA, run the 'CapstoneApplication' and make sure the API is running on port 8080.
 
@@ -77,7 +109,7 @@ Client-side API Instructions:
 - Visual Studio Code
 
 2. Clone the repository from GitHub. Scroll to the top of this page and click on the green Code button. Ensure SSH is selected and copy the link provided. In your terminal, perform the following command:
-`git clone git@github.com:aya-rh/front_end_project.git`
+`git clone git@github.com:samra-a/Capstone_Project_GRWM.git`
 
 3. Install node modules.
 
