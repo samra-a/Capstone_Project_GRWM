@@ -141,6 +141,7 @@ To gain access to the API in Postman, use **`https://localhost:{port}/{endpoint}
 5. `DELETE http://localhost:8080/users/{userId}` - this will delete a user's whole list of collages.
 
 **Collages:**
+
 **NOTE:** There are a total of 40 collages in the dataloader.
 
 1. `GET http://localhost:8080/collages` - this will retrieve all of the collages.
