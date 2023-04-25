@@ -84,7 +84,7 @@ The depenencies that we used in our API include:
 
 **Server-side API Instructions:**
 1. Ensure the following are installed on your machine:
-- Intellij IDEA , running with JDK 17
+- Intellij IDEA (running with JDK 17)
 - Postgres
 - Postman
 - Postico
