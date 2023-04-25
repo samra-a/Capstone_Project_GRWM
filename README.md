@@ -53,5 +53,45 @@ Our component diagram showcases the different sections that we had in our JavaSc
 
 <hr />
 
+## 4. Setup Instructions 
+
+Server-side API Instructions:
+1. Ensure the following are installed on your machine:
+- Intellij IDEA , running with JDK 17
+- Postgres
+- Postman
+- Postico
+
+2. Clone the repository from GitHub. Scroll to the top of this page and click on the green Code button. Ensure SSH is selected and copy the link provided. In your terminal, perform the following command:
+`git clone git@github.com:aya-rh/Capstone_Project_GRWM.git`
+
+3. Create a new PostgreSQL database named 'grwm_capstone' anywhere in your terminal.
+`create db grwm_capstone`
+
+4. Via Intellij IDEA, run the 'CapstoneApplication' and make sure the API is running on port 8080.
+
+5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available in this link.
+
+Client-side API Instructions:
+1. Ensure the following are installed on your machine:
+- Visual Studio Code
+
+2. Clone the repository from GitHub. Scroll to the top of this page and click on the green Code button. Ensure SSH is selected and copy the link provided. In your terminal, perform the following command:
+`git clone git@github.com:aya-rh/front_end_project.git`
+
+3. Install node modules.
+
+4. In your terminal, perform the following command: `npm install` or `npm i`
+
+5. Install React Icons - in your terminal, perform the following command: `npm i react-icons`
+
+6. Install React Slick - in your terminal, perform the following command: `npm i react-slick`
+
+7. Install React Router - in your terminal, perform the following command: `npm install react-router-dom@6`
+
+8. Run React App.
+
+9. In your terminal, perform the following command: `npm start`. The App should automatically open in the browser. If it doesn't, you can manually navigate to http://localhost:3000 using your preferred browser.
+
 **DISCLAIMER:** All images used in this project were for educational purposes only. No Copyright Infringement Intended.
 
