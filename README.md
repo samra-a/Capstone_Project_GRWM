@@ -55,6 +55,20 @@ Our component diagram showcases the different sections that we had in our JavaSc
 
 <hr />
 
+## 3. Tech Stack
+
+The technologies that we used in this project include:
+
+- Java
+- Spring Boot
+- PostgreSQL
+- JavaScript
+- React
+- HTML
+- CSS
+
+<hr />
+
 ## 4. Dependencies
 The depenencies that we used in our API include:
 
