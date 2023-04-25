@@ -97,7 +97,7 @@ The depenencies that we used in our API include:
 
 4. Via Intellij IDEA, run the 'CapstoneApplication' and make sure the API is running on port 8080.
 
-5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available below in section 5 'RESTful Route Endpoints'.
+5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available below in section 6 'RESTful Route Endpoints'.
 
 **Client-side API Instructions:**
 1. Ensure the following are installed on your machine:
