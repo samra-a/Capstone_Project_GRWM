@@ -124,9 +124,11 @@ The depenencies that we used in our API include:
 
 ## 6. RESTful Route Endpoints
 
-To gain access to the website, use **`https://localhost:{port}/{endpoint}`** - the default port is **8080**. To navigate to the different sections, follow the endpoints below:
+To gain access to the API in Postman, use **`https://localhost:{port}/{endpoint}`** - the default port is **8080**. To navigate to the different sections, follow the endpoints below:
 
 **Users:** 
+
+**NOTE:** There are only 4 users in the dataloader.
 
 1. `GET http://localhost:8080/users` - this will return all users.
 
@@ -139,6 +141,7 @@ To gain access to the website, use **`https://localhost:{port}/{endpoint}`** - t
 5. `DELETE http://localhost:8080/users/{userId}` - this will delete a user's whole list of collages.
 
 **Collages:**
+**NOTE:** There are a total of 40 collages in the dataloader.
 
 1. `GET http://localhost:8080/collages` - this will retrieve all of the collages.
 
