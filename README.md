@@ -70,7 +70,7 @@ Server-side API Instructions:
 
 4. Via Intellij IDEA, run the 'CapstoneApplication' and make sure the API is running on port 8080.
 
-5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available in this link.
+5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available in this [link](https://github.com/samra-a/Capstone_Project_GRWM).
 
 Client-side API Instructions:
 1. Ensure the following are installed on your machine:
