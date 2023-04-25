@@ -13,9 +13,10 @@
 1. Project Description
 2. Diagrams
 3. Tech Stack
-4. Setup Instructions
-5. RESTful Route Endpoints
-6. Future
+4. Dependencies
+5. Setup Instructions
+6. RESTful Route Endpoints
+7. Future
 
 <hr />
 
@@ -54,9 +55,20 @@ Our component diagram showcases the different sections that we had in our JavaSc
 
 <hr />
 
-## 4. Setup Instructions 
+## 4. Dependencies
+The depenencies that we used in our API include:
 
-Server-side API Instructions:
+- spring-boot-starter-data-jpa
+- spring-boot-starter-web
+- spring-boot-devtools
+- postgresql
+- spring-boot-starter-test
+
+<hr />
+
+## 5. Setup Instructions 
+
+**Server-side API Instructions:**
 1. Ensure the following are installed on your machine:
 - Intellij IDEA , running with JDK 17
 - Postgres
@@ -73,7 +85,7 @@ Server-side API Instructions:
 
 5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available below in section 5 'RESTful Route Endpoints'.
 
-Client-side API Instructions:
+**Client-side API Instructions:**
 1. Ensure the following are installed on your machine:
 - Visual Studio Code
 
@@ -96,7 +108,7 @@ Client-side API Instructions:
 
 <hr />
 
-## 5. RESTful Route Endpoints
+## 6. RESTful Route Endpoints
 
 To gain access to the website, use **`https://localhost:{port}/{endpoint}`** - the default port is **8080**. To navigate to the different sections, follow the endpoints below:
 
