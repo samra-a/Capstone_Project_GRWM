@@ -60,18 +60,15 @@ To gain access to the website, use `https://localhost:{port}/{endpoint}` - the d
 
 Users: 
 
-1. `GET http://localhost:8080/users` 
-- will return all users.
+1. `GET http://localhost:8080/users` - this will return all users.
 
 2. `GET http://localhost:8080/users/{userId}` - this will return a specific user.
 
 3. `POST http://localhost:8080/users/{userId}/collages/{collageId}` - this will add a specific collage, using it's id, to a specific user.
 
-4. `PUT http://localhost:8080/users/{userId}/collage/{collageId}`
-- This will remove a specific collage from the user's list. When the GET request is performed after this to retrieve a specific user, their updated list should display.
+4. `PUT http://localhost:8080/users/{userId}/collage/{collageId}`- this will remove a specific collage from the user's list. When the GET request is performed after this to retrieve a specific user, their updated list should display.
 
-5. `DELETE http://localhost:8080/users/{userId}`
-- This will delete a user's whole list of collages.
+5. `DELETE http://localhost:8080/users/{userId}` - this will delete a user's whole list of collages.
 
 Collages:
 
