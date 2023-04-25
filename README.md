@@ -13,8 +13,8 @@
 1. Project Description
 2. Diagrams
 3. Tech Stack
-4. RESTful Route Endpoints
-5. Setup Instructions
+4. Setup Instructions
+5. RESTful Route Endpoints
 6. Future
 
 <hr />
@@ -54,31 +54,7 @@ Our component diagram showcases the different sections that we had in our JavaSc
 
 <hr />
 
-## 4. RESTful Route Endpoints
-
-To gain access to the website, use `https://localhost:{port}/{endpoint}` - the default port is **8080**. To navigate to the different sections, follow the endpoints below:
-
-**Users:** 
-
-1. `GET http://localhost:8080/users` - this will return all users.
-
-2. `GET http://localhost:8080/users/{userId}` - this will return a specific user.
-
-3. `POST http://localhost:8080/users/{userId}/collages/{collageId}` - this will add a specific collage, using it's id, to a specific user.
-
-4. `PUT http://localhost:8080/users/{userId}/collage/{collageId}`- this will remove a specific collage from the user's list. When the GET request '`GET http://localhost:8080/users/{userId}`' is performed after this to retrieve a specific user, their updated list should display.
-
-5. `DELETE http://localhost:8080/users/{userId}` - this will delete a user's whole list of collages.
-
-**Collages:**
-
-1. `GET http://localhost:8080/collages` - this will retrieve all of the collages.
-
-2. `GET http://localhost:8080/collages/users/{userId}` - this will retrieve a specific user's list of collages.
-
-<hr />
-
-## 5. Setup Instructions 
+## 4. Setup Instructions 
 
 Server-side API Instructions:
 1. Ensure the following are installed on your machine:
@@ -95,7 +71,7 @@ Server-side API Instructions:
 
 4. Via Intellij IDEA, run the 'CapstoneApplication' and make sure the API is running on port 8080.
 
-5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available in this [link](https://github.com/samra-a/Capstone_Project_GRWM).
+5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available below in section 5 'RESTful Route Endpoints'.
 
 Client-side API Instructions:
 1. Ensure the following are installed on your machine:
@@ -117,6 +93,32 @@ Client-side API Instructions:
 8. Run React App.
 
 9. In your terminal, perform the following command: `npm start`. The App should automatically open in the browser. If it doesn't, you can manually navigate to http://localhost:3000 using your preferred browser.
+
+<hr />
+
+## 5. RESTful Route Endpoints
+
+To gain access to the website, use **`https://localhost:{port}/{endpoint}`** - the default port is **8080**. To navigate to the different sections, follow the endpoints below:
+
+**Users:** 
+
+1. `GET http://localhost:8080/users` - this will return all users.
+
+2. `GET http://localhost:8080/users/{userId}` - this will return a specific user.
+
+3. `POST http://localhost:8080/users/{userId}/collages/{collageId}` - this will add a specific collage, using it's id, to a specific user.
+
+4. `PUT http://localhost:8080/users/{userId}/collage/{collageId}`- this will remove a specific collage from the user's list. When the GET request '`GET http://localhost:8080/users/{userId}`' is performed after this to retrieve a specific user, their updated list should display.
+
+5. `DELETE http://localhost:8080/users/{userId}` - this will delete a user's whole list of collages.
+
+**Collages:**
+
+1. `GET http://localhost:8080/collages` - this will retrieve all of the collages.
+
+2. `GET http://localhost:8080/collages/users/{userId}` - this will retrieve a specific user's list of collages.
+
+<hr />
 
 **DISCLAIMER:** All images used in this project were for educational purposes only. No Copyright Infringement Intended.
 
