@@ -167,9 +167,9 @@ To gain access to the API in Postman, use **`https://localhost:{port}/{endpoint}
 
 **NOTE:** There are a total of 40 collages in the dataloader.
 
-1. `GET http://localhost:8080/collages` - this will retrieve all of the collages.
+1. **GET** `http://localhost:8080/collages` - this will retrieve all of the collages.
 
-2. `GET http://localhost:8080/collages/users/{userId}` - this will retrieve a specific user's list of collages.
+2. **GET** `http://localhost:8080/collages/users/{userId}` - this will retrieve a specific user's list of collages.
 
 <hr />
 
