@@ -141,7 +141,7 @@ The depenencies that we used in our API include:
 
 7. Install React Router - in your terminal, perform the following command: `npm install react-router-dom@6`
 
-8. Run React App - in your terminal, perform the following command: `npm start`. The App should automatically open in the browser. If it doesn't, you can manually navigate to http://localhost:3000 using your preferred browser.
+8. Run React App - in your terminal, perform the following command: `npm start`. The App should automatically open in the browser. If it doesn't, you can manually navigate to `http://localhost:3000` using your preferred browser.
 
 <hr />
 
