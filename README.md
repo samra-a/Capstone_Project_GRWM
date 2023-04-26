@@ -120,7 +120,7 @@ The depenencies that we used in our API include:
 2. Clone the repository from GitHub. Scroll to the top of this page and click on the green 'Code' button. Ensure SSH is selected and copy the link provided, or you can copy the link here: `git@github.com:samra-a/Capstone_Project_GRWM.git`. In your terminal, perform the following command:
 `git clone git@github.com:samra-a/Capstone_Project_GRWM.git`
 
-3. Create a new PostgreSQL database named 'grwm_capstone' anywhere in your terminal.
+3. Create a new PostgreSQL database named 'grwm_capstone' anywhere in your terminal by writing this command:
 `createdb grwm_capstone`
 
 4. Via Intellij IDEA, run the 'CapstoneApplication' and make sure the API is running on port 8080.
