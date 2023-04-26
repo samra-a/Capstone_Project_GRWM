@@ -153,7 +153,7 @@ To gain access to the API in Postman, use **`https://localhost:{port}/{endpoint}
 
 **NOTE:** There are only 4 users in the dataloader.
 
-1. `**GET** http://localhost:8080/users` - this will return all users.
+1. **GET** `http://localhost:8080/users` - this will return all users.
 
 2. `GET http://localhost:8080/users/{userId}` - this will return a specific user.
 
