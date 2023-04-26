@@ -16,6 +16,7 @@
 4. Dependencies
 5. Setup Instructions
 6. RESTful Route Endpoints
+7. Future Developments
 
 <hr />
 
@@ -146,6 +147,16 @@ To gain access to the API in Postman, use **`https://localhost:{port}/{endpoint}
 1. `GET http://localhost:8080/collages` - this will retrieve all of the collages.
 
 2. `GET http://localhost:8080/collages/users/{userId}` - this will retrieve a specific user's list of collages.
+
+<hr />
+
+## 7. Future Devlopments 
+
+If we had been granted additional time, we would have liked to add the following features to our project:
+- Explore Tailwind features, that would increase user experience and produce a more seamless navigation.
+- Implementing more algorithms and including more questions to provide a tailored styling lookbook and outfit collection for the user.
+- Using JavaScriptUI, we would have implemented more interactiveness to our platform, allowing the user to create an avatar that resembles them and have the avatar try on the clothing.
+- Adding a premium subscription for these additional services.
 
 <hr />
 
