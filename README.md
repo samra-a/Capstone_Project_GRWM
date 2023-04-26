@@ -22,7 +22,7 @@
 
 ## 1. Project Description
 
-As part of our capstone project, we had to create an API and the client-side for the API in less than two weeks. Our group decided to base our project on personalised outfit inspirations whilst also promoting body positivity, as this was something we had not seen before and we wanted to set ourselves a challenge. This ‘Get Ready with Me’ website is a styling platform, designed with the user in mind allowing women to embrace their individual sense of style by making chosing an outfit easy. There is a short quiz for the user to fill out and once they have done this outfit collages will be generated, using an algorithm, based on the user's answers.
+As part of our capstone project, we had to create an API and the client-side for the API in less than two weeks. Our group decided to base our project on personalised outfit inspirations whilst also promoting body positivity, as this was something we had not seen before and we wanted to set ourselves a challenge. This ‘Get Ready with Me’ (GRWM) website is a styling platform, designed with the user in mind allowing women to embrace their individual sense of style by making chosing an outfit easy. There is a short quiz for the user to fill out and once they have done this, outfit collages will be generated using an algorithm, based on the user's answers.
 
 <hr />
 
@@ -117,7 +117,7 @@ The depenencies that we used in our API include:
 - Postman
 - Postico
 
-2. Clone the repository from GitHub. Scroll to the top of this page and click on the green Code button. Ensure SSH is selected and copy the link provided, or you can copy the link here: `git@github.com:samra-a/Capstone_Project_GRWM.git`. In your terminal, perform the following command:
+2. Clone the repository from GitHub. Scroll to the top of this page and click on the green 'Code' button. Ensure SSH is selected and copy the link provided, or you can copy the link here: `git@github.com:samra-a/Capstone_Project_GRWM.git`. In your terminal, perform the following command:
 `git clone git@github.com:samra-a/Capstone_Project_GRWM.git`
 
 3. Create a new PostgreSQL database named 'grwm_capstone' anywhere in your terminal.
@@ -128,15 +128,12 @@ The depenencies that we used in our API include:
 5. To ensure the endpoints are working as expected, you can test them using Postman. All endpoints are available below in **section 6 'RESTful Route Endpoints'.**
 
 **Client-side API Instructions:**
-1. Ensure the following are installed on your machine:
+1. Ensure the following is installed on your machine:
 - Visual Studio Code
 
-2. Clone the repository from GitHub. Scroll to the top of this page and click on the green Code button. Ensure SSH is selected and copy the link provided. In your terminal, perform the following command:
-`git clone git@github.com:samra-a/Capstone_Project_GRWM.git`
+3. Install node modules - in your terminal, perform the following command: `npm install` or `npm i`
 
-3. Install node modules.
-
-4. In your terminal, perform the following command: `npm install` or `npm i`
+**NOTE:** `npm install`/ `npm i` should also install react icons, react slick, and react router for you. If it does not, please follow steps 5, 6, and 7. If it does, you can go straight to step 8.
 
 5. Install React Icons - in your terminal, perform the following command: `npm i react-icons`
 
@@ -144,9 +141,7 @@ The depenencies that we used in our API include:
 
 7. Install React Router - in your terminal, perform the following command: `npm install react-router-dom@6`
 
-8. Run React App.
-
-9. In your terminal, perform the following command: `npm start`. The App should automatically open in the browser. If it doesn't, you can manually navigate to http://localhost:3000 using your preferred browser.
+8. Run React App - in your terminal, perform the following command: `npm start`. The App should automatically open in the browser. If it doesn't, you can manually navigate to http://localhost:3000 using your preferred browser.
 
 <hr />
 
@@ -158,7 +153,7 @@ To gain access to the API in Postman, use **`https://localhost:{port}/{endpoint}
 
 **NOTE:** There are only 4 users in the dataloader.
 
-1. `GET http://localhost:8080/users` - this will return all users.
+1. `**GET** http://localhost:8080/users` - this will return all users.
 
 2. `GET http://localhost:8080/users/{userId}` - this will return a specific user.
 
