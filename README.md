@@ -150,7 +150,7 @@ To gain access to the API in Postman, use **`https://localhost:{port}/{endpoint}
 
 <hr />
 
-## 7. Future Devlopments 
+## 7. Future Developments
 
 If we had been granted additional time, we would have liked to add the following features to our project:
 - Explore Tailwind features, that would increase user experience and produce a more seamless navigation.
