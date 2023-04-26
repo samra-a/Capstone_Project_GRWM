@@ -104,8 +104,7 @@ The depenencies that we used in our API include:
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-	</dependencies>
-    
+</dependencies>  
 ```
 <hr />
 
