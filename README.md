@@ -72,12 +72,41 @@ The technologies that we used in this project include:
 ## 4. Dependencies
 The depenencies that we used in our API include:
 
-- spring-boot-starter-data-jpa
 - spring-boot-starter-web
 - spring-boot-devtools
-- postgresql
 - spring-boot-starter-test
+- spring-boot-starter-data-jpa
+- postgresql
 
+```
+<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+    
+```
 <hr />
 
 ## 5. Setup Instructions 
