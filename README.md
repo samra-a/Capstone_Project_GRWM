@@ -135,9 +135,9 @@ The depenencies that we used in our API include:
 
 **NOTE:** `npm install`/ `npm i` should also install react icons, react slick, and react router for you. If it does not, please follow instructions 5, 6, and 7. If it does, you can go straight to step 8.
 
-5. Install React Icons - in your terminal, perform the following command: `npm i react-icons`
+5. Install React Icons - in your terminal, perform the following command: `npm install react-icons`
 
-6. Install React Slick - in your terminal, perform the following command: `npm i react-slick`
+6. Install React Slick - in your terminal, perform the following command: `npm install react-slick`
 
 7. Install React Router - in your terminal, perform the following command: `npm install react-router-dom@6`
 
