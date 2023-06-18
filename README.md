@@ -147,7 +147,7 @@ The depenencies that we used in our API include:
 
 ## 6. RESTful Route Endpoints
 
-To gain access to the API in Postman, use **`https://localhost:{port}/{endpoint}`** - the default port is **8080**. To navigate to the different sections, follow the endpoints below:
+To gain access to the API in Postman, use **`http://localhost:{port}/{endpoint}`** - the default port is **8080**. To navigate to the different sections, follow the endpoints below:
 
 **Users:** 
 
